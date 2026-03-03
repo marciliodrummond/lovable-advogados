@@ -320,6 +320,149 @@ Para **redação jurídica**, **análise de contratos** e **raciocínio complexo
           'Teste os 3 com a mesma petição — a diferença de qualidade na redação é visível',
         ],
       },
+      {
+        title: 'De ChatGPT para Claude: Dicionário Completo',
+        subtitle: 'Tudo que você já conhece no ChatGPT tem um equivalente (melhor) no Claude',
+        level: 'iniciante',
+        icon: 'arrow-right-left',
+        analogy: {
+          tag: 'Pedra de Rosetta',
+          text: 'Se você já usa o ChatGPT, pense neste card como uma **Pedra de Rosetta** — uma tradução direta de cada funcionalidade que você já conhece para o equivalente no Claude. A maioria é igual ou melhor. Nenhum conhecimento é desperdiçado.',
+        },
+        content: `Se você vem do ChatGPT, vai se sentir em casa rapidamente. Cada funcionalidade tem um equivalente no Claude — muitas vezes mais poderoso. Use esta tabela como referência rápida:
+
+**Funcionalidades Equivalentes:**
+
+| No ChatGPT | No Claude | Diferença |
+|------------|-----------|-----------|
+| **GPTs personalizados** | **Skills** | Skills são ativados *automaticamente* — não precisa trocar de assistente. Pode combinar vários na mesma conversa |
+| **Custom Instructions** | **Personalizar** (Instruções Globais) | Mesmo conceito. No Claude, mais espaço e mais granular |
+| **GPT Builder** | **Criar Skill** (arquivo .md) | No Claude você escreve instruções em texto simples — mais flexível que o builder visual |
+| **Canvas** | **Artefatos** | Artefatos geram documentos, tabelas, código e diagramas dentro da conversa |
+| **Projects** | **Projetos** | Muito similar! Base de conhecimento + instruções + conversas organizadas |
+| **Memory** | **Memória** | Funciona igual — o Claude lembra suas preferências entre conversas |
+| **Operator** | **Claude in Chrome** | Extensão que navega na web, lê telas, preenche formulários |
+| **ChatGPT Desktop** | **Cowork (Desktop)** | Cowork é MUITO mais poderoso: lê arquivos locais, cria Word/Excel/PowerPoint, executa automações |
+| **GPT Store** | **Plugins** | Plugins oficiais do Claude (Legal, Productivity, Finance, etc.) |
+| **Actions (API)** | **MCP (Conectores)** | MCP conecta a APIs externas: Google Drive, Gmail, DataJud, PJe |
+| **Code Interpreter** | **Execução de Código** | Claude executa Python, cria gráficos, calcula valores |
+| **DALL-E** | *(não tem)* | Claude não gera imagens — use Gamma.app ou Canva como complemento |
+| **Voice Mode** | *(em desenvolvimento)* | Claude ainda não tem modo de voz nativo |
+| **Web Browsing** | **Pesquisa Web** | Integrada, com fontes citadas |
+| **Plugins (ChatGPT)** | **MCP + Plugins** | No Claude, separados em Plugins (funcionalidades) e MCP (conexões externas) |
+
+**O que muda na prática do dia a dia:**
+
+→ **Não precisa trocar de GPT:** No ChatGPT você abre um GPT diferente para cada tarefa. No Claude, os Skills são ativados automaticamente — tudo na mesma conversa.
+
+→ **Projetos funcionam igual:** Se você já organizava por Projects no ChatGPT, faz a mesma coisa no Claude.
+
+→ **Cowork > Desktop do ChatGPT:** O Cowork lê seus arquivos locais, cria documentos Office e automatiza fluxos. É significativamente mais poderoso.
+
+→ **Instruções são mais flexíveis:** Em vez de um builder visual limitado, você escreve instruções em markdown — pode ser tão detalhado quanto quiser.`,
+        tips: [
+          'Se já tinha GPTs no ChatGPT, recrie como Skills no Claude — geralmente ficam melhores',
+          'Custom Instructions → Personalizar: copie e cole suas instruções — funciona igual',
+          'Seus Projects migram facilmente: crie o projeto, suba os mesmos documentos',
+          'O maior ganho é não precisar trocar de GPT — Skills são automáticos',
+        ],
+        elementGrid: [
+          { icon: 'book-open', name: 'GPTs → Skills', description: 'Ativação automática, combina vários, sem trocar de assistente', whenToUse: 'Qualquer especialização (petições, contratos, pareceres)', highlight: true },
+          { icon: 'settings', name: 'Custom Instructions → Personalizar', description: 'Mesmo conceito, mais espaço, mais controle', whenToUse: 'Definir estilo, formato, preferências permanentes' },
+          { icon: 'folder-open', name: 'Projects → Projetos', description: 'Base de conhecimento + instruções + conversas', whenToUse: 'Organizar por cliente, caso ou área' },
+          { icon: 'monitor', name: 'Desktop → Cowork', description: 'Lê arquivos, cria Office, automatiza fluxos', whenToUse: 'Trabalho pesado com documentos locais', highlight: true },
+          { icon: 'plug', name: 'Actions → MCP', description: 'Conexão com APIs: Google Drive, Gmail, DataJud', whenToUse: 'Integrar com ferramentas externas' },
+          { icon: 'brain', name: 'Memory → Memória', description: 'Lembra preferências entre conversas', whenToUse: 'Personalização progressiva automática' },
+        ],
+      },
+      {
+        title: 'Resolvendo Problemas: Guia de Sobrevivência',
+        subtitle: 'Arquivo não abre? Ferramenta não funciona? Resolva em 2 minutos',
+        level: 'iniciante',
+        icon: 'wrench',
+        analogy: {
+          tag: 'Plantão de Dúvidas',
+          text: 'Pense no Claude como um **colega de escritório** que está ali do lado. Quando algo não funciona, você não precisa chamar o "TI" — basta **descrever o problema ou mandar um print** que ele mesmo te ajuda a resolver. É o suporte técnico mais inteligente do mundo.',
+        },
+        content: `Os problemas mais comuns dos advogados ao usar o Claude — e como resolver cada um em menos de 2 minutos.
+
+**A regra de ouro: peça ajuda ao próprio Claude!**
+Quando algo não funcionar, faça exatamente isso:
+1. **Tire um print** da tela com o erro
+2. **Cole o print** na conversa do Claude (Ctrl+V ou arraste)
+3. Diga: *"Estou tentando [fazer X] e apareceu isso. Como resolvo?"*
+4. O Claude vai analisar o print e te guiar passo a passo
+
+**Problema 1 — Arquivo PDF não abre / não é lido:**
+→ **Causa:** PDF é imagem escaneada (sem texto selecionável)
+→ **Solução:** Abra no Google Drive → "Abrir com Google Docs" → OCR automático → Copie o texto e cole no Claude
+→ **Alternativa:** Use ilovepdf.com para converter PDF→TXT antes
+
+**Problema 2 — Claude diz que não consegue acessar o arquivo:**
+→ **Causa:** Arquivo muito grande, formato incompatível ou corrompido
+→ **Solução:** Converta para .txt ou .md (texto puro). Para PDFs grandes: divida em partes menores no ilovepdf.com
+→ **Limite:** Até 32MB por arquivo no chat; sem limite prático no Cowork
+
+**Problema 3 — Cowork não encontra meus arquivos:**
+→ **Causa:** Permissão de acesso à pasta não foi concedida
+→ **Solução:** Na primeira vez, o Cowork pede permissão para acessar pastas. Clique "Permitir". Se não pediu: Configurações → Cowork → Pasta de trabalho → Selecione a pasta
+
+**Problema 4 — Plugin/Skill não ativa:**
+→ **Causa:** Não está habilitado ou não está na conversa certa
+→ **Solução:** Vá em Configurações → Skills/Plugins → Verifique se está ativado (toggle ligado). Se for Skill, confirme que o arquivo .md está na pasta correta
+
+**Problema 5 — Claude "esquece" minhas instruções:**
+→ **Causa:** Conversa muito longa (contexto cheio) ou instrução não está salva
+→ **Solução:** Abra nova conversa (o Projeto mantém as instruções). Para instruções permanentes: salve em Personalizar ou no Skill
+
+**Problema 6 — Resposta cortada no meio:**
+→ **Causa:** Resposta muito longa atingiu o limite de tokens
+→ **Solução:** Digite "continue" ou "continue exatamente de onde parou". Para evitar: peça em partes ("primeiro faça os fatos, depois o direito")
+
+**Problema 7 — Tokens acabaram / limite atingido:**
+→ **Causa:** Atingiu o limite diário do plano
+→ **Solução:** Aguarde o reset (geralmente à meia-noite). Para emergências: use DeepSeek ou ChatGPT Free. Para evitar: siga as dicas de otimização do guia
+
+**Problema 8 — Formatação estranha no resultado:**
+→ **Causa:** O Claude usa Markdown por padrão
+→ **Solução:** Peça: "Formate a saída em texto simples, sem markdown". Ou copie e cole no Word — a formatação se ajusta automaticamente`,
+        prompt: `[COLE ESTE PROMPT QUANDO TIVER QUALQUER PROBLEMA]
+
+Estou tendo um problema ao usar o Claude. Vou descrever o que aconteceu:
+
+1. O que eu estava tentando fazer: [DESCREVA]
+2. O que aconteceu: [DESCREVA OU COLE O PRINT]
+3. Mensagem de erro (se houver): [COLE AQUI]
+
+Me ajude a resolver passo a passo, em linguagem simples.
+Se for um problema de configuração, me diga onde encontrar cada opção.`,
+        tips: [
+          'O MELHOR suporte do Claude é o PRÓPRIO Claude — cole o print e pergunte',
+          'Para PDFs escaneados: Google Docs faz OCR gratuito e resolve 90% dos casos',
+          'Conversa cortada? Nova conversa + mesmo Projeto = contexto limpo e instruções mantidas',
+          'Tokens acabaram? DeepSeek e ChatGPT Free são seus planos B gratuitos',
+          'Antes de pedir ajuda no grupo, tente: tire print → cole no Claude → pergunte',
+        ],
+        checklist: [
+          {
+            title: 'Checklist Rápido de Resolução',
+            items: [
+              'Tirei print do erro e colei no Claude para diagnóstico',
+              'Verifiquei se o arquivo está em formato compatível (PDF, DOCX, TXT, MD)',
+              'Para PDFs escaneados: converti via Google Docs ou ilovepdf.com',
+              'Verifiquei se Skills/Plugins estão ativados nas configurações',
+              'Se conversa está longa: abri nova conversa no mesmo Projeto',
+              'Se tokens acabaram: usando alternativa gratuita (DeepSeek/ChatGPT)',
+            ],
+          },
+        ],
+        links: [
+          { label: 'ilovepdf.com (converter PDFs)', url: 'https://www.ilovepdf.com/pt' },
+          { label: 'Google Docs (OCR gratuito)', url: 'https://docs.google.com' },
+          { label: 'DeepSeek (alternativa gratuita)', url: 'https://chat.deepseek.com' },
+          { label: 'Status do Claude (verificar se está fora do ar)', url: 'https://status.anthropic.com' },
+        ],
+      },
     ],
   },
 

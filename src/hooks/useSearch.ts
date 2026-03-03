@@ -211,6 +211,24 @@ const synonyms: Record<string, string[]> = {
   'copilot': ['copilot', 'microsoft', 'bing', 'pesquisa', 'gratuitas', 'alternativa'],
   'gamma': ['gamma', 'apresentacao', 'slides', 'gratuitas', 'alternativa'],
 
+  // Migração ChatGPT → Claude
+  'gpts': ['gpts', 'skills', 'chatgpt', 'migrar', 'equivalente', 'custom gpt'],
+  'custom gpt': ['gpts', 'skills', 'chatgpt', 'equivalente', 'personalizado'],
+  'canvas': ['canvas', 'artefato', 'artefatos', 'chatgpt', 'equivalente'],
+  'operator': ['operator', 'chrome', 'automacao', 'chatgpt', 'equivalente'],
+  'actions': ['actions', 'mcp', 'api', 'chatgpt', 'equivalente', 'conector'],
+  'migrar': ['migrar', 'migracao', 'chatgpt', 'equivalente', 'transicao', 'mudar'],
+  'equivalente': ['equivalente', 'chatgpt', 'corresponde', 'igual', 'similar', 'dicionario'],
+
+  // Resolução de problemas
+  'problema': ['problema', 'erro', 'bug', 'nao funciona', 'travou', 'resolver', 'ajuda'],
+  'erro': ['erro', 'problema', 'mensagem', 'falha', 'nao funciona'],
+  'nao funciona': ['nao funciona', 'problema', 'erro', 'quebrou', 'travou'],
+  'travou': ['travou', 'parou', 'congelou', 'nao responde', 'problema'],
+  'nao abre': ['nao abre', 'arquivo', 'pdf', 'problema', 'formato', 'converter'],
+  'cortou': ['cortou', 'cortada', 'incompleto', 'continue', 'resposta cortada'],
+  'print': ['print', 'screenshot', 'captura', 'tela', 'imagem'],
+
   // DataJud e APIs
   'datajud': ['datajud', 'cnj', 'api', 'processo', 'consulta', 'mcp'],
   'pje': ['pje', 'processo eletronico', 'download', 'comunica', 'mni'],
@@ -408,6 +426,30 @@ const intentMap: Record<string, string[]> = {
   'whatsapp cliente': ['Skill de Comunicacao com Cliente'],
   'cobranca honorario': ['Skill de Comunicacao com Cliente'],
   'skill marketing': ['Skill de Marketing Juridico'],
+
+  // Migração ChatGPT
+  'gpts no claude': ['De ChatGPT para Claude'],
+  'equivalente gpts': ['De ChatGPT para Claude'],
+  'custom gpt': ['De ChatGPT para Claude'],
+  'migrar chatgpt': ['De ChatGPT para Claude'],
+  'vindo do chatgpt': ['De ChatGPT para Claude'],
+  'chatgpt equivalente': ['De ChatGPT para Claude'],
+  'canvas no claude': ['De ChatGPT para Claude', 'Artefatos'],
+  'operator no claude': ['De ChatGPT para Claude', 'Claude in Chrome'],
+
+  // Resolução de problemas
+  'pdf nao abre': ['Resolvendo Problemas'],
+  'arquivo nao abre': ['Resolvendo Problemas'],
+  'nao funciona': ['Resolvendo Problemas'],
+  'como resolver': ['Resolvendo Problemas'],
+  'erro no claude': ['Resolvendo Problemas'],
+  'resposta cortada': ['Resolvendo Problemas'],
+  'tokens acabaram': ['Resolvendo Problemas', 'Economize com IAs Gratuitas'],
+  'limite atingido': ['Resolvendo Problemas', 'Entendendo Tokens'],
+  'formatacao estranha': ['Resolvendo Problemas'],
+  'skill nao ativa': ['Resolvendo Problemas'],
+  'cowork nao funciona': ['Resolvendo Problemas'],
+  'pedir ajuda': ['Resolvendo Problemas'],
 }
 
 // ── Multi-field weighted scoring ────────────────────────────
@@ -658,6 +700,8 @@ const relatedMap: Record<string, string[]> = {
   'Skill de Comunicação com Cliente': ['E-mails Jurídicos Profissionais', 'Criando Skills Jurídicos'],
   'Skill de Marketing Jurídico': ['Marketing Jurídico Ético com Claude', 'Criando Skills Jurídicos'],
   'Anti-Alucinação: Blindagem do Advogado': ['Ética e IA na Advocacia', 'Pesquisa Jurídica Avançada'],
+  'De ChatGPT para Claude: Dicionário Completo': ['Claude vs ChatGPT vs Gemini', 'O que são Skills', 'O que é o Cowork'],
+  'Resolvendo Problemas: Guia de Sobrevivência': ['Economize com IAs Gratuitas', 'Pré-processe Documentos'],
 }
 
 export function getRelatedCards(cardTitle: string): string[] {
