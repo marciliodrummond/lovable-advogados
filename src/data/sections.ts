@@ -2316,6 +2316,122 @@ Para cada fluxo, documente no CLAUDE.md do Projeto: quais conectores usar, em qu
         ],
       },
       {
+        title: 'Proteção de Dados e LGPD',
+        subtitle: 'O que o Claude vê, o que não vê e como se proteger',
+        level: 'intermediario',
+        icon: 'shield',
+        analogy: {
+          text: 'O Claude in Chrome funciona como um **estagiário que só enxerga a folha que está na sua mesa**. Ele não abre gavetas, não lê documentos de outras mesas e só age quando você manda. Mas — como qualquer estagiário — você precisa supervisionar o que ele vê.',
+        },
+        content: `Todo advogado que usa IA deve entender a proteção de dados. Não usar por medo é tão arriscado quanto usar sem informação. O caminho inteligente é **configurar corretamente**.
+
+**O que o Chrome Agent pode fazer:**
+
+| Capacidade | Detalhe |
+|-----------|---------|
+| Ler aba ativa | Apenas o conteúdo da aba que está na sua tela |
+| Interagir com páginas | Clicar, preencher, navegar — com sua permissão |
+| Capturar screenshots | Da aba atual para interpretar texto e layout |
+
+**O que ele NÃO faz:**
+
+| Limitação | Detalhe |
+|----------|---------|
+| Abas em segundo plano | Não acessa abas fechadas ou minimizadas |
+| Arquivos locais | Não lê documentos do seu computador |
+| Sites financeiros | Bloqueado automaticamente pela Anthropic |
+| Agir sem permissão | Cada domínio exige autorização individual |
+
+**Seus dados treinam a IA?**
+
+| Plano | Treinamento | Retenção | Ação necessária |
+|-------|------------|----------|----------------|
+| Free / Pro / Max | Pode ser ativado (opt-in desde Out/2025) | 30 dias (ou 5 anos se ativar) | Desativar em Configurações → Privacidade |
+| **Team / Enterprise** | **Nunca** | **Mínima** | **Nenhuma — proteção automática** |
+| Modo Incógnito | Nunca | Reduzida | Ativar para sessões sensíveis |
+| Conectores (Drive, MCP) | Nunca | — | Dados de conectores são isolados |
+
+**Conversas deletadas nunca são usadas para treinamento.**`,
+        tips: [
+          'Plano Team é a recomendação para escritórios — zero treinamento com dados + controle centralizado',
+          'Modo Incógnito garante que aquela sessão específica nunca treina modelos',
+          'Dados de conectores (Google Drive, MCPs) nunca entram no treinamento',
+          'Conversas deletadas são excluídas de qualquer pipeline de dados',
+        ],
+      },
+      {
+        title: 'Boas Práticas LGPD para Advogados',
+        subtitle: '6 regras de ouro + configuração essencial',
+        level: 'intermediario',
+        icon: 'scale',
+        content: `A LGPD exige controle sobre dados pessoais que você processa. Estas 6 práticas garantem conformidade ao usar o Claude:
+
+**1. Anonimize antes de consultar**
+Nunca insira dados pessoais identificáveis diretamente. Troque nomes por letras, omita CPFs, use hipóteses. A IA não precisa saber quem é o cliente para ajudar com a tese.
+
+**2. Use o modo "Pedir antes de agir"**
+Mantenha ativada a confirmação antes de cada ação. Isso cria a camada de **supervisão humana** que a LGPD espera de quem usa ferramentas automatizadas.
+
+**3. Restrinja permissões de site**
+Conceda acesso apenas aos domínios necessários: tribunais, PJe, bases de jurisprudência. Menos permissões = menor superfície de risco.
+
+**4. Evite sites de credenciais**
+A Anthropic bloqueia categorias sensíveis automaticamente, mas se o site lida com senhas ou dados bancários, não use o agente ali.
+
+**5. Modo Incógnito para sessões sensíveis**
+Quando trabalhar com informações particularmente delicadas, use conversas incógnitas — nunca treinam modelos.
+
+**6. Considere o plano Team**
+Para escritórios com mais de 1 pessoa: zero treinamento, controle administrativo e termos comerciais dedicados.`,
+        steps: [
+          'Configurações → Privacidade → desative "Ajudar a melhorar o Claude" (planos individuais)',
+          'Claude in Chrome → revise permissões de site e remova domínios desnecessários',
+          'Ative o modo "Pedir antes de agir" para supervisão de cada ação',
+          'Use Modo Incógnito para dados particularmente sensíveis de clientes',
+          'Avalie migração para plano Team se lida regularmente com dados pessoais',
+        ],
+      },
+      {
+        title: 'Segurança e Riscos Reais',
+        subtitle: 'Camadas de proteção e o que ficar atento',
+        level: 'avancado',
+        icon: 'alert-triangle',
+        content: `A Anthropic implementa proteções técnicas verificáveis. Mas riscos existem e você deve conhecê-los.
+
+**Camadas de proteção ativas:**
+
+| Proteção | Como funciona |
+|---------|--------------|
+| Permissão por domínio | Cada site exige autorização separada e explícita |
+| Confirmação de ações | Publicar, compartilhar ou transacionar exige OK do usuário |
+| Bloqueio de categorias | Sites financeiros, adultos e piratas bloqueados por padrão |
+| Conectores isolados | Google Drive e MCPs não entram no treinamento |
+| Conversas deletadas | Exclusão real — nunca usadas para treinar |
+| Filtros de dados | Bloqueia tokens de autenticação e API keys nos retornos |
+| Red teaming contínuo | Pesquisadores testam vulnerabilidades constantemente |
+
+**Riscos reais que merecem atenção:**
+
+**Prompt Injection:**
+Instruções maliciosas escondidas em páginas podem induzir ações não autorizadas. A Anthropic reduz significativamente a taxa de sucesso, mas o risco nunca será zero.
+
+**O agente vê sua tela:**
+Se há informações confidenciais visíveis na aba ativa, o Claude as processa. Tenha consciência do que está exposto antes de ativar o agente.
+
+**Ações irreversíveis:**
+O Claude pode errar a interpretação. Revise cuidadosamente antes de permitir ações que modifiquem dados ou realizem operações permanentes.
+
+**A proteção mais eficaz:** supervisão humana ativa. Use confirmação, revise ações propostas e mantenha o agente restrito ao escopo necessário.
+
+**Advogado que entende de proteção de dados não tem medo de IA. Tem estratégia.**`,
+        tips: [
+          'O modo "Pedir antes de agir" é sua principal defesa contra prompt injection',
+          'Feche abas com informações sensíveis antes de ativar o agente em outra aba',
+          'Nunca permita ações automáticas em sites que modificam dados sem reversão',
+          'O plano Team adiciona camadas extras de proteção documental e contratual',
+        ],
+      },
+      {
         title: 'Pesquisa Jurisprudencial',
         subtitle: 'Pesquise tribunais automaticamente',
         level: 'avancado',
