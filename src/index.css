@@ -190,6 +190,18 @@ body::before {
   20%, 40%, 60%, 80% { transform: translateX(6px); }
 }
 
+@keyframes particleRise {
+  0% { opacity: 0; transform: translateY(0) scale(0.5); }
+  15% { opacity: 1; }
+  85% { opacity: 1; }
+  100% { opacity: 0; transform: translateY(-100vh) scale(1); }
+}
+
+@keyframes loginPulse {
+  0%, 100% { opacity: 0.6; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.15); }
+}
+
 /* ── Utility: hide scrollbar ─── */
 .scrollbar-none::-webkit-scrollbar { display: none; }
 .scrollbar-none { -ms-overflow-style: none; scrollbar-width: none; }
