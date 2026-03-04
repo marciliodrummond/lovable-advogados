@@ -1,4 +1,4 @@
-import { Sun, Moon, Scale } from 'lucide-react'
+import { Sun, Moon, Heart } from 'lucide-react'
 
 interface HeaderProps {
   theme: 'dark' | 'light'
@@ -14,12 +14,12 @@ export function Header({ theme, onToggleTheme }: HeaderProps) {
       <a href="#" className="flex items-center gap-2.5 no-underline text-[var(--fg-primary)]">
         <div className="w-7 h-7 rounded-md flex items-center justify-center" style={{
           background: 'linear-gradient(135deg, var(--bg-accent), var(--bg-accent-hover))',
-          boxShadow: 'var(--gold-glow-sm)',
+          boxShadow: 'var(--lovable-glow-sm)',
         }}>
-          <Scale className="w-4 h-4 text-[var(--fg-on-accent)]" />
+          <Heart className="w-4 h-4 text-[var(--fg-on-accent)]" />
         </div>
         <span className="font-display text-sm font-bold tracking-tight">
-          Claude<span className="text-[var(--fg-accent)]"> para Advogados</span>
+          Lovable<span className="text-[var(--fg-accent)]"> para Advogados</span>
         </span>
         <span className="hidden sm:inline font-mono text-[10px] text-[var(--fg-muted)]">v1.0</span>
       </a>

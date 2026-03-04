@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 /* ═══════════════════════════════════════════════════════════════
-   SI DESIGN SYSTEM — CSS Tokens
-   Super Inteligênc[IA] · Proprietary Design System
+   LOVABLE PARA ADVOGADOS — CSS Tokens
+   Design System · Purple/Pink Gradient Theme
    Fonts loaded via <link> in index.html for performance
    ═══════════════════════════════════════════════════════════════ */
 
@@ -11,18 +11,18 @@
   --font-sans: 'DM Sans', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
   --font-mono: 'JetBrains Mono', 'SF Mono', 'Fira Code', monospace;
 
-  --color-gold-50: #fdf9f0;
-  --color-gold-100: #faf0d9;
-  --color-gold-200: #f3e0b3;
-  --color-gold-300: #ecce87;
-  --color-gold-400: #e2c074;
-  --color-gold-500: #d4a84e;
-  --color-gold-600: #b8883a;
-  --color-gold-700: #96692c;
-  --color-gold-800: #6e4d22;
-  --color-gold-900: #4a3318;
+  --color-lovable-50: #fdf4ff;
+  --color-lovable-100: #fae8ff;
+  --color-lovable-200: #f5d0fe;
+  --color-lovable-300: #e879f9;
+  --color-lovable-400: #c084fc;
+  --color-lovable-500: #a855f7;
+  --color-lovable-600: #9333ea;
+  --color-lovable-700: #7e22ce;
+  --color-lovable-800: #6b21a8;
+  --color-lovable-900: #581c87;
 
-  --color-si-black: #030409;
+  --color-black: #030409;
   --color-gray-950: #0a0c12;
   --color-gray-900: #12141c;
   --color-gray-850: #1a1c26;
@@ -46,31 +46,31 @@
   --bg-card: rgba(14, 16, 23, 0.6);
   --bg-elevated: #1a1c26;
   --bg-overlay: rgba(0, 0, 0, 0.7);
-  --bg-accent: #e2c074;
-  --bg-accent-hover: #d4a84e;
-  --bg-accent-subtle: rgba(226, 192, 116, 0.08);
+  --bg-accent: #a855f7;
+  --bg-accent-hover: #9333ea;
+  --bg-accent-subtle: rgba(168, 85, 247, 0.08);
 
   /* ── Foreground ─── */
   --fg-primary: #edeef2;
   --fg-secondary: #8c90a0;
   --fg-muted: #555869;
-  --fg-accent: #e2c074;
-  --fg-accent-dim: #b8883a;
-  --fg-on-accent: #030409;
+  --fg-accent: #c084fc;
+  --fg-accent-dim: #9333ea;
+  --fg-on-accent: #ffffff;
 
   /* ── Borders ─── */
   --border-line: rgba(255, 255, 255, 0.06);
   --border-strong: rgba(255, 255, 255, 0.1);
-  --border-accent: rgba(226, 192, 116, 0.15);
-  --border-focus: #e2c074;
+  --border-accent: rgba(168, 85, 247, 0.2);
+  --border-focus: #a855f7;
 
   /* ── Glows ─── */
-  --gold-glow-sm: 0 0 20px rgba(226, 192, 116, 0.06);
-  --gold-glow-md: 0 0 40px rgba(226, 192, 116, 0.08);
+  --lovable-glow-sm: 0 0 20px rgba(168, 85, 247, 0.1);
+  --lovable-glow-md: 0 0 40px rgba(168, 85, 247, 0.12);
 
   /* ── Grid ─── */
-  --grid-color: rgba(226, 192, 116, 0.03);
-  --grid-accent: rgba(226, 192, 116, 0.06);
+  --grid-color: rgba(168, 85, 247, 0.03);
+  --grid-accent: rgba(168, 85, 247, 0.06);
 }
 
 [data-theme="light"] {
@@ -80,32 +80,32 @@
   --bg-card: rgba(255, 255, 255, 0.7);
   --bg-elevated: #ffffff;
   --bg-overlay: rgba(0, 0, 0, 0.3);
-  --bg-accent: #e2c074;
-  --bg-accent-hover: #d4a84e;
-  --bg-accent-subtle: rgba(226, 192, 116, 0.1);
+  --bg-accent: #a855f7;
+  --bg-accent-hover: #9333ea;
+  --bg-accent-subtle: rgba(168, 85, 247, 0.1);
 
   --fg-primary: #1a1a1a;
   --fg-secondary: #6b6b6b;
   --fg-muted: #a0a0a0;
-  --fg-accent: #96692c;
-  --fg-accent-dim: #d4a84e;
-  --fg-on-accent: #030409;
+  --fg-accent: #7e22ce;
+  --fg-accent-dim: #9333ea;
+  --fg-on-accent: #ffffff;
 
   --border-line: rgba(0, 0, 0, 0.07);
   --border-strong: rgba(0, 0, 0, 0.12);
-  --border-accent: rgba(150, 105, 44, 0.2);
-  --border-focus: #96692c;
+  --border-accent: rgba(126, 34, 206, 0.2);
+  --border-focus: #7e22ce;
 
-  --gold-glow-sm: 0 0 20px rgba(226, 192, 116, 0.1);
-  --gold-glow-md: 0 0 40px rgba(226, 192, 116, 0.12);
+  --lovable-glow-sm: 0 0 20px rgba(168, 85, 247, 0.12);
+  --lovable-glow-md: 0 0 40px rgba(168, 85, 247, 0.15);
 
-  --grid-color: rgba(150, 105, 44, 0.04);
-  --grid-accent: rgba(150, 105, 44, 0.07);
+  --grid-color: rgba(126, 34, 206, 0.04);
+  --grid-accent: rgba(126, 34, 206, 0.07);
 }
 
 /* ── Global Base ─── */
 ::selection {
-  background: rgba(226, 192, 116, 0.25);
+  background: rgba(168, 85, 247, 0.25);
 }
 
 html {
@@ -124,7 +124,7 @@ body {
   overflow-x: hidden;
 }
 
-/* ── Gold Grid Background ─── */
+/* ── Lovable Grid Background ─── */
 body::before {
   content: '';
   position: fixed;

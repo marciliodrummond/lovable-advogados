@@ -1,4 +1,4 @@
-import { Scale, BookOpen, Layers, Zap } from 'lucide-react'
+import { Heart, BookOpen, Layers, Zap } from 'lucide-react'
 
 interface HeroProps {
   onStart: () => void
@@ -9,10 +9,10 @@ export function Hero({ onStart }: HeroProps) {
     <section className="relative min-h-[85vh] flex flex-col justify-center py-24 sm:py-32">
       {/* Animated orbs */}
       <div className="absolute top-[10%] right-[-10%] w-[400px] h-[400px] rounded-full pointer-events-none blur-[80px] animate-[orbFloat_12s_ease-in-out_infinite]" style={{
-        background: 'radial-gradient(circle, rgba(226,192,116,0.12) 0%, transparent 70%)',
+        background: 'radial-gradient(circle, rgba(168,85,247,0.12) 0%, transparent 70%)',
       }} />
       <div className="absolute bottom-[20%] left-[-5%] w-[300px] h-[300px] rounded-full pointer-events-none blur-[80px] animate-[orbFloat_12s_ease-in-out_infinite_-4s]" style={{
-        background: 'radial-gradient(circle, rgba(226,192,116,0.08) 0%, transparent 70%)',
+        background: 'radial-gradient(circle, rgba(232,121,249,0.08) 0%, transparent 70%)',
       }} />
 
       <div className="relative z-10">
@@ -20,7 +20,7 @@ export function Hero({ onStart }: HeroProps) {
         <div className="flex items-center gap-2.5 mb-6" style={{ animation: 'fadeIn 0.8s ease both' }}>
           <div className="w-6 h-px bg-gradient-to-r from-[var(--fg-accent)] to-transparent" />
           <span className="font-mono text-[11px] font-medium text-[var(--fg-accent)] uppercase tracking-[0.12em]">
-            Super Inteligênc[IA] · Guia Interativo
+            Construa Apps Jurídicos · Guia Interativo
           </span>
         </div>
 
@@ -29,8 +29,8 @@ export function Hero({ onStart }: HeroProps) {
           className="font-display text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-[-0.04em] leading-[1.05] max-w-[700px] mb-6"
           style={{ animation: 'fadeUp 0.8s ease 0.1s both' }}
         >
-          Claude para{' '}
-          <span className="bg-gradient-to-br from-gold-300 via-gold-500 to-gold-400 bg-clip-text text-transparent">
+          Lovable para{' '}
+          <span className="bg-gradient-to-br from-lovable-300 via-lovable-500 to-lovable-400 bg-clip-text text-transparent">
             Advogados
           </span>
         </h1>
@@ -40,7 +40,7 @@ export function Hero({ onStart }: HeroProps) {
           className="text-base sm:text-lg text-[var(--fg-secondary)] max-w-[480px] leading-relaxed"
           style={{ animation: 'fadeUp 0.8s ease 0.2s both' }}
         >
-          Guia completo e interativo para dominar todo o ecossistema Claude na advocacia — do chat básico ao Cowork, Skills, Plugins e automações avançadas.
+          Guia completo e interativo para advogados construírem apps profissionais com Lovable — do primeiro projeto ao deploy, com Supabase, Stripe e segurança jurídica.
         </p>
 
         {/* Metrics */}
@@ -50,9 +50,9 @@ export function Hero({ onStart }: HeroProps) {
         >
           {[
             { icon: Layers, value: '10', label: 'Seções' },
-            { icon: BookOpen, value: '109', label: 'Tutoriais' },
-            { icon: Zap, value: '29', label: 'Prompts Prontos' },
-            { icon: Scale, value: '4', label: 'Níveis' },
+            { icon: BookOpen, value: '115', label: 'Tutoriais' },
+            { icon: Zap, value: '40+', label: 'Prompts Prontos' },
+            { icon: Heart, value: '14', label: 'Apps Completos' },
           ].map((m, i) => (
             <div key={i} className="flex items-center gap-3">
               <div className="w-9 h-9 rounded-lg flex items-center justify-center" style={{
@@ -77,10 +77,10 @@ export function Hero({ onStart }: HeroProps) {
             style={{
               background: 'linear-gradient(135deg, var(--bg-accent), var(--bg-accent-hover))',
               color: 'var(--fg-on-accent)',
-              boxShadow: 'var(--gold-glow-sm)',
+              boxShadow: 'var(--lovable-glow-sm)',
             }}
           >
-            <Scale className="w-4 h-4" />
+            <Heart className="w-4 h-4" />
             Começar o Guia
           </button>
         </div>

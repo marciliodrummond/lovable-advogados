@@ -1,8 +1,8 @@
 import { useState, useRef, useEffect } from 'react'
 import { KeyRound, AlertCircle, Eye, EyeOff, ArrowRight } from 'lucide-react'
 
-const ACCESS_KEY = '6114Adv104Claude'
-const STORAGE_KEY = 'si-claude-advogados-auth'
+const ACCESS_KEY = '6114Lov104Advogados'
+const STORAGE_KEY = 'lovable-advogados-auth'
 
 interface LoginGateProps {
   onAuthenticated: () => void
@@ -48,7 +48,7 @@ function Particles() {
           left: `${left}%`,
           bottom: '-5%',
           opacity: 0,
-          background: `rgba(226, 192, 116, ${opacity})`,
+          background: `rgba(168, 85, 247, ${opacity})`,
           animation: `particleRise ${duration}s ease-in-out ${delay}s infinite`,
         }}
       />
@@ -57,32 +57,34 @@ function Particles() {
   return <>{particles}</>
 }
 
-/* Hexagonal logo SVG matching the brand */
-function HexLogo({ className }: { className?: string }) {
+/* Heart logo SVG matching the Lovable brand */
+function HeartLogo({ className }: { className?: string }) {
   return (
     <svg viewBox="0 0 780 780" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
       <path
-        d="M390 0L693.8 175V525L390 700L86.2 525V175L390 0Z"
+        d="M390 680C390 680 100 480 100 280C100 180 180 100 280 100C340 100 370 140 390 170C410 140 440 100 500 100C600 100 680 180 680 280C680 480 390 680 390 680Z"
         fill="none"
-        stroke="url(#logoGrad)"
-        strokeWidth="48"
+        stroke="url(#heartGrad)"
+        strokeWidth="42"
         strokeLinejoin="round"
+        strokeLinecap="round"
       />
       <path
-        d="M390 140L598 260V500L390 620L182 500V260L390 140Z"
+        d="M390 600C390 600 180 440 180 290C180 215 235 170 300 170C340 170 365 195 390 225C415 195 440 170 480 170C545 170 600 215 600 290C600 440 390 600 390 600Z"
         fill="none"
-        stroke="url(#logoGrad2)"
-        strokeWidth="36"
+        stroke="url(#heartGrad2)"
+        strokeWidth="28"
         strokeLinejoin="round"
+        strokeLinecap="round"
       />
       <defs>
-        <linearGradient id="logoGrad" x1="86" y1="0" x2="694" y2="700">
-          <stop offset="0%" stopColor="#e2c074" />
-          <stop offset="100%" stopColor="#d4a84e" />
+        <linearGradient id="heartGrad" x1="100" y1="100" x2="680" y2="680">
+          <stop offset="0%" stopColor="#c084fc" />
+          <stop offset="100%" stopColor="#a855f7" />
         </linearGradient>
-        <linearGradient id="logoGrad2" x1="182" y1="140" x2="598" y2="620">
-          <stop offset="0%" stopColor="#e2c074" stopOpacity="0.5" />
-          <stop offset="100%" stopColor="#d4a84e" stopOpacity="0.3" />
+        <linearGradient id="heartGrad2" x1="180" y1="170" x2="600" y2="600">
+          <stop offset="0%" stopColor="#e879f9" stopOpacity="0.5" />
+          <stop offset="100%" stopColor="#a855f7" stopOpacity="0.3" />
         </linearGradient>
       </defs>
     </svg>
@@ -131,13 +133,13 @@ export function LoginGate({ onAuthenticated }: LoginGateProps) {
 
       {/* Animated ambient orbs */}
       <div className="absolute top-[-10%] right-[-5%] w-[500px] h-[500px] rounded-full pointer-events-none blur-[120px] animate-[orbFloat_14s_ease-in-out_infinite]" style={{
-        background: 'radial-gradient(circle, rgba(226,192,116,0.14) 0%, transparent 70%)',
+        background: 'radial-gradient(circle, rgba(168,85,247,0.14) 0%, transparent 70%)',
       }} />
       <div className="absolute bottom-[-5%] left-[-10%] w-[450px] h-[450px] rounded-full pointer-events-none blur-[120px] animate-[orbFloat_14s_ease-in-out_infinite_-5s]" style={{
-        background: 'radial-gradient(circle, rgba(226,192,116,0.10) 0%, transparent 70%)',
+        background: 'radial-gradient(circle, rgba(232,121,249,0.10) 0%, transparent 70%)',
       }} />
       <div className="absolute top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full pointer-events-none blur-[150px] animate-[orbFloat_18s_ease-in-out_infinite_-8s]" style={{
-        background: 'radial-gradient(circle, rgba(226,192,116,0.06) 0%, transparent 60%)',
+        background: 'radial-gradient(circle, rgba(168,85,247,0.06) 0%, transparent 60%)',
       }} />
 
       {/* Floating particles */}
@@ -151,14 +153,14 @@ export function LoginGate({ onAuthenticated }: LoginGateProps) {
         {/* Branding section */}
         <div className="text-center mb-10" style={{ animation: 'fadeUp 0.8s ease 0.1s both' }}>
 
-          {/* Hexagonal logo with glow */}
+          {/* Heart logo with glow */}
           <div className="relative inline-flex items-center justify-center mb-7">
             {/* Glow behind logo */}
             <div className="absolute w-28 h-28 rounded-full blur-[40px]" style={{
-              background: 'radial-gradient(circle, rgba(226,192,116,0.25) 0%, transparent 70%)',
+              background: 'radial-gradient(circle, rgba(168,85,247,0.25) 0%, transparent 70%)',
               animation: 'loginPulse 4s ease-in-out infinite',
             }} />
-            <HexLogo className="relative w-20 h-20 sm:w-24 sm:h-24" />
+            <HeartLogo className="relative w-20 h-20 sm:w-24 sm:h-24" />
           </div>
 
           {/* Label line */}
@@ -172,8 +174,8 @@ export function LoginGate({ onAuthenticated }: LoginGateProps) {
 
           {/* Title with gradient */}
           <h1 className="font-display text-3xl sm:text-4xl font-extrabold tracking-[-0.04em] leading-[1.1] text-[var(--fg-primary)]">
-            Claude para{' '}
-            <span className="bg-gradient-to-br from-gold-300 via-gold-500 to-gold-400 bg-clip-text text-transparent">
+            Lovable para{' '}
+            <span className="bg-gradient-to-br from-lovable-300 via-lovable-500 to-lovable-400 bg-clip-text text-transparent">
               Advogados
             </span>
           </h1>
@@ -193,7 +195,7 @@ export function LoginGate({ onAuthenticated }: LoginGateProps) {
             WebkitBackdropFilter: 'blur(24px)',
             borderColor: focused ? 'var(--border-accent)' : 'var(--border-line)',
             boxShadow: focused
-              ? '0 0 60px rgba(226,192,116,0.08), 0 8px 32px rgba(0,0,0,0.4)'
+              ? '0 0 60px rgba(168,85,247,0.08), 0 8px 32px rgba(0,0,0,0.4)'
               : '0 8px 32px rgba(0,0,0,0.3)',
             transition: 'border-color 0.4s ease, box-shadow 0.4s ease',
             animation: 'fadeUp 0.8s ease 0.25s both',
@@ -201,7 +203,7 @@ export function LoginGate({ onAuthenticated }: LoginGateProps) {
         >
           {/* Shimmer top border */}
           <div className="absolute top-0 left-0 right-0 h-px" style={{
-            background: 'linear-gradient(90deg, transparent, rgba(226,192,116,0.3), transparent)',
+            background: 'linear-gradient(90deg, transparent, rgba(168,85,247,0.3), transparent)',
             backgroundSize: '200% 100%',
             animation: 'shimmer 4s ease-in-out infinite',
           }} />
@@ -228,7 +230,7 @@ export function LoginGate({ onAuthenticated }: LoginGateProps) {
                       background: 'var(--bg-surface)',
                       borderColor: error ? '#ef4444' : focused ? 'var(--border-focus)' : 'var(--border-line)',
                       color: 'var(--fg-primary)',
-                      boxShadow: focused ? 'var(--gold-glow-sm), inset 0 1px 0 rgba(226,192,116,0.05)' : 'none',
+                      boxShadow: focused ? 'var(--lovable-glow-sm), inset 0 1px 0 rgba(168,85,247,0.05)' : 'none',
                     }}
                     autoComplete="off"
                   />
@@ -254,7 +256,7 @@ export function LoginGate({ onAuthenticated }: LoginGateProps) {
                 style={{
                   background: 'linear-gradient(135deg, var(--bg-accent), var(--bg-accent-hover))',
                   color: 'var(--fg-on-accent)',
-                  boxShadow: '0 0 30px rgba(226,192,116,0.15), 0 4px 12px rgba(0,0,0,0.2)',
+                  boxShadow: '0 0 30px rgba(168,85,247,0.15), 0 4px 12px rgba(0,0,0,0.2)',
                 }}
               >
                 {/* Button shimmer effect */}
@@ -282,7 +284,7 @@ export function LoginGate({ onAuthenticated }: LoginGateProps) {
             <div className="w-5 h-px" style={{ background: 'var(--border-line)' }} />
           </div>
           <p className="text-[10px] text-[var(--fg-muted)]">
-            Guia interativo para dominar o ecossistema Claude na advocacia
+            Guia interativo para construir apps jurídicos com Lovable
           </p>
         </div>
       </div>

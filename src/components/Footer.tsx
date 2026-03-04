@@ -6,7 +6,7 @@ export function Footer() {
           Guia criado por <span className="text-[var(--fg-accent)] font-semibold">Super Inteligênc[IA]</span> · Marcílio Drummond
         </p>
         <p className="text-[10px] text-[var(--fg-muted)]">
-          Todo resultado gerado pelo Claude deve ser revisado por um advogado habilitado. A responsabilidade ética e legal é sempre do profissional.
+          Apps construídos com Lovable devem ser revisados e validados pelo advogado responsável. A responsabilidade ética e legal é sempre do profissional.
         </p>
         <p className="text-[10px] text-[var(--fg-muted)]">
           @marcilio.drummond · Versão Março/2026
