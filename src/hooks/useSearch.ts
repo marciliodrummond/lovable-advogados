@@ -710,7 +710,14 @@ const relatedMap: Record<string, string[]> = {
 }
 
 export function getRelatedCards(cardTitle: string): string[] {
-  return relatedMap[cardTitle] || []
+  // Exact match first
+  if (relatedMap[cardTitle]) return relatedMap[cardTitle]
+  // Accent-insensitive fallback (cards in sections 1-5 lack accents)
+  const norm = normalize(cardTitle)
+  for (const [key, values] of Object.entries(relatedMap)) {
+    if (normalize(key) === norm) return values
+  }
+  return []
 }
 
 // ── Main hook ───────────────────────────────────────────────

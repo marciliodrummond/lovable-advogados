@@ -2033,9 +2033,9 @@ O Supabase usa PostgreSQL, o mesmo banco de dados usado por empresas como Apple,
 O plano gratuito do Supabase oferece:
 - 500 MB de banco de dados
 - 1 GB de storage
-- 50.000 requests por mes
-- 2 projetos
-- Autenticacao ilimitada
+- 50.000 usuarios ativos mensais (autenticacao)
+- 2 projetos ativos
+- Requests de API ilimitados
 
 Para um escritorio individual ou pequeno, o plano gratuito e mais do que suficiente. So precisa de upgrade quando tiver centenas de usuarios ou gigabytes de documentos.
 
@@ -5984,7 +5984,7 @@ Use React Hook Form + Zod para validacao, shadcn/ui para todos os inputs, steppe
           description: 'Imagine um estagiário que leu todas as leis, doutrinas e jurisprudências do mundo, entende qualquer pedido em português natural e redige peças impecáveis em segundos. O Claude é esse "estagiário" por trás do Lovable — ele interpreta seus prompts e gera código real.',
         },
         elementGrid: [
-          { icon: 'brain', title: 'Claude Opus 4.6', description: 'Usado no Agent Mode — o modelo mais poderoso, gera apps completos e resolve problemas complexos', highlight: true },
+          { icon: 'brain', title: 'Claude Opus (Agent)', description: 'Usado no Agent Mode — o modelo mais poderoso da família Claude, gera apps completos e resolve problemas complexos', highlight: true },
           { icon: 'zap', title: 'Claude Sonnet', description: 'Usado no modo padrão — equilibra velocidade e qualidade para a maioria das tarefas' },
           { icon: 'message-square', title: 'Claude Opus (Chat)', description: 'Usado no Chat Mode — ideal para debugar, investigar e planejar sem gastar créditos de geração' },
         ],
@@ -5994,9 +5994,9 @@ Use React Hook Form + Zod para validacao, shadcn/ui para todos os inputs, steppe
 
 | Modo | Modelo | Quando Usar |
 |------|--------|-------------|
-| **Agent Mode** | Claude Opus 4.6 | Construir features completas, gerar páginas, criar lógica complexa |
-| **Standard** | Claude Sonnet 3.7/4.5 | Tarefas do dia a dia, ajustes, correções |
-| **Chat Mode** | Claude Opus 4.5 | Investigar problemas, planejar, tirar dúvidas sobre o código |
+| **Agent Mode** | Claude Opus (mais avançado) | Construir features completas, gerar páginas, criar lógica complexa |
+| **Standard** | Claude Sonnet | Tarefas do dia a dia, ajustes, correções |
+| **Chat Mode** | Claude Opus | Investigar problemas, planejar, tirar dúvidas sobre o código |
 
 **O que isso significa na prática:**
 
@@ -6016,7 +6016,7 @@ Quando você digita um prompt no Lovable, ele é enviado para o Claude, que anal
         ],
         links: [
           { label: 'Documentação do Claude', url: 'https://docs.anthropic.com' },
-          { label: 'Modelos Anthropic', url: 'https://docs.anthropic.com/en/docs/about-claude/models' },
+          { label: 'Modelos Anthropic', url: 'https://docs.anthropic.com/en/docs/about-claude/models/all-models' },
           { label: 'Blog do Lovable sobre IA', url: 'https://lovable.dev/blog' },
         ],
       },
@@ -6102,7 +6102,7 @@ Sem Knowledge Base, você precisa repetir instruções em cada prompt. Com Knowl
           'Teste sempre: faça um prompt e verifique se as diretrizes foram respeitadas',
         ],
         links: [
-          { label: 'Docs: Knowledge Base', url: 'https://docs.lovable.dev/features/knowledge-base' },
+          { label: 'Docs: Knowledge Base', url: 'https://docs.lovable.dev/features/knowledge' },
         ],
       },
       {
@@ -6150,15 +6150,15 @@ Cliente → Chat UI (Lovable) → Edge Function (Supabase) → API Claude → Re
 
 | Modelo | Custo por 1K tokens | Estimativa por conversa |
 |--------|---------------------|------------------------|
-| Claude Haiku | ~$0.25/1M input | ~$0.002 por conversa |
+| Claude Haiku 4.5 | ~$1/1M input | ~$0.008 por conversa |
 | Claude Sonnet | ~$3/1M input | ~$0.02 por conversa |
 | GPT-4o mini | ~$0.15/1M input | ~$0.001 por conversa |
 
-**Dica:** Use Claude Haiku ou GPT-4o mini para chatbots — são rápidos, baratos e suficientes para FAQs jurídicas.
+**Dica:** Use GPT-4o mini (mais barato) ou Claude Haiku 4.5 (melhor qualidade) para chatbots — são rápidos e suficientes para FAQs jurídicas.
 
 **Importante:** O chatbot NÃO substitui consultoria jurídica. Configure-o para informar sobre serviços, prazos e procedimentos, mas sempre oriente o cliente a agendar consulta para questões específicas.`,
         tips: [
-          'Use Claude Haiku para chatbots — é rápido e barato (centavos por conversa)',
+          'Use GPT-4o mini ou Claude Haiku 4.5 para chatbots — são rápidos e baratos (centavos por conversa)',
           'NUNCA permita que o chatbot dê conselho jurídico — isso viola a ética da OAB',
           'Configure um limite de mensagens diárias para controlar custos',
           'Salve conversas no banco — elas são ouro para entender o que seus clientes perguntam',
@@ -6213,9 +6213,10 @@ create table documentos_juridicos (
   created_at timestamptz default now()
 );
 
--- Índice para busca rápida
+-- Índice para busca rápida (crie APÓS inserir dados)
 create index on documentos_juridicos
-  using ivfflat (embedding vector_cosine_ops);
+  using ivfflat (embedding vector_cosine_ops)
+  with (lists = 100);
 \`\`\`
 
 **Vantagem vs busca tradicional:** A busca por palavras-chave retorna "prazo recurso especial" mas não encontra "tempo para interpor REsp". A busca vetorial (RAG) encontra ambos, porque entende o significado.`,
@@ -6419,6 +6420,7 @@ workflow.add_edge("analisar", "redigir")
         links: [
           { label: 'CrewAI Documentation', url: 'https://docs.crewai.com' },
           { label: 'LangGraph Documentation', url: 'https://langchain-ai.github.io/langgraph/' },
+          { label: 'Autogen (Microsoft)', url: 'https://github.com/microsoft/autogen' },
         ],
       },
       {
@@ -6427,11 +6429,11 @@ workflow.add_edge("analisar", "redigir")
         level: 'intermediario',
         icon: 'dollar-sign',
         refTable: [
-          { feature: 'Claude Haiku', description: 'Respostas rápidas, chatbots, classificação', config: '~$0.25/1M input tokens' },
+          { feature: 'Claude Haiku 4.5', description: 'Respostas rápidas, chatbots, classificação', config: '~$1/1M input tokens' },
           { feature: 'Claude Sonnet', description: 'Análise, geração de texto, agentes simples', config: '~$3/1M input tokens' },
-          { feature: 'Claude Opus', description: 'Tarefas complexas, análise jurídica profunda', config: '~$15/1M input tokens' },
+          { feature: 'Claude Opus', description: 'Tarefas complexas, análise jurídica profunda', config: '~$5/1M input tokens' },
           { feature: 'GPT-4o mini', description: 'Alternativa barata para tarefas simples', config: '~$0.15/1M input tokens' },
-          { feature: 'Gemini Flash', description: 'Alternativa Google, rápido e barato', config: '~$0.075/1M input tokens' },
+          { feature: 'Gemini 2.0 Flash', description: 'Alternativa Google, rápido e barato', config: '~$0.10/1M input tokens' },
           { feature: 'Embeddings (OpenAI)', description: 'Transformar texto em vetores para RAG', config: '~$0.02/1M tokens' },
         ],
         content: `Integrar IA ao seu app jurídico tem custos de API que variam conforme o modelo e volume de uso. Aqui está um guia prático para planejar seus custos.
@@ -6440,11 +6442,11 @@ workflow.add_edge("analisar", "redigir")
 
 | Feature | Modelo Recomendado | Custo Estimado/mês |
 |---------|-------------------|-------------------|
-| **Chatbot FAQ** | Haiku / GPT-4o mini | R$ 5-20/mês (500 conversas) |
+| **Chatbot FAQ** | GPT-4o mini / Haiku 4.5 | R$ 5-25/mês (500 conversas) |
 | **Análise de contrato** | Sonnet / GPT-4o | R$ 20-80/mês (100 contratos) |
-| **RAG jurisprudencial** | Embeddings + Haiku | R$ 10-30/mês (1000 buscas) |
-| **Geração de petições** | Sonnet / Opus | R$ 30-100/mês (50 petições) |
-| **Triagem de emails** | Haiku | R$ 2-10/mês (500 emails) |
+| **RAG jurisprudencial** | Embeddings + Haiku 4.5 | R$ 15-40/mês (1000 buscas) |
+| **Geração de petições** | Sonnet / Opus | R$ 30-80/mês (50 petições) |
+| **Triagem de emails** | GPT-4o mini / Haiku 4.5 | R$ 5-15/mês (500 emails) |
 
 **Estratégias de otimização:**
 
@@ -6503,7 +6505,7 @@ workflow.add_edge("analisar", "redigir")
 | Órgão | Posição |
 |-------|---------|
 | **OAB** | IA permitida como ferramenta auxiliar; vedado substituir o advogado |
-| **CNJ** | Resolução 332/2020 — IA no Judiciário deve ser transparente e auditável |
+| **CNJ** | Resolução 332/2020, atualizada pela 615/2025 — IA no Judiciário deve ser transparente e auditável |
 | **LGPD** | Dados pessoais processados por IA devem seguir as mesmas regras de proteção |
 
 **Padrão recomendado para respostas de IA:**
@@ -6685,7 +6687,7 @@ O Claude Code edita os mesmos arquivos que o Lovable gera. Como ambos usam Claud
           'Use junto com VS Code: abra o terminal integrado e rode o Claude Code de lá',
         ],
         links: [
-          { label: 'Claude Code — Documentação', url: 'https://docs.anthropic.com/en/docs/claude-code' },
+          { label: 'Claude Code — Documentação', url: 'https://docs.anthropic.com/en/docs/claude-code/overview' },
           { label: 'Instalar Node.js', url: 'https://nodejs.org' },
           { label: 'Anthropic Console', url: 'https://console.anthropic.com' },
         ],
@@ -6716,7 +6718,7 @@ O Claude Code edita os mesmos arquivos que o Lovable gera. Como ambos usam Claud
           'Verifique se tudo funciona corretamente no browser',
           'Quando estiver satisfeito, faça o commit: "git add . && git commit -m \'feat: adicionar controle de prazos\'"',
           'Envie para o GitHub: "git push origin main"',
-          'Volte ao Lovable — ele detectará as mudanças em até 1 minuto',
+          'Volte ao Lovable — ele detectará as mudanças automaticamente. Se não aparecerem, clique em "Sync" no painel do GitHub',
           'Use Visual Edits (grátis) no Lovable para ajustes finais de design',
         ],
         prompt: `# CLAUDE.md — Exemplo para projeto Lovable jurídico
@@ -6770,7 +6772,7 @@ Se você editar o mesmo arquivo no Lovable E localmente, pode haver conflito. Pa
 2. Não edite no Lovable enquanto trabalha localmente
 3. Se houver conflito, resolva no terminal com \`git merge\`
 
-**Dica avançada:** Use branches para features grandes. Crie com \`git checkout -b feat/prazos\`, desenvolva, e faça merge quando estiver pronto.`,
+**Dica avançada:** Use branches para features grandes. Crie com \`git checkout -b feat/prazos\`, desenvolva, e faça merge quando estiver pronto. **Importante:** O Lovable só sincroniza o branch \`main\` — commits em outros branches não aparecem até serem merged.`,
         tips: [
           'SEMPRE rode "git pull" antes de começar a trabalhar localmente — evita conflitos',
           'O CLAUDE.md é essencial — sem ele, o Claude Code não conhece os padrões do seu projeto',
@@ -6828,8 +6830,8 @@ Se você editar o mesmo arquivo no Lovable E localmente, pode haver conflito. Pa
           'Como roda no browser, funciona até em Chromebooks e tablets',
         ],
         links: [
-          { label: 'Google Antigravity', url: 'https://idx.google.com' },
-          { label: 'Documentação Antigravity', url: 'https://developers.google.com/idx' },
+          { label: 'Google Antigravity', url: 'https://antigravity.google' },
+          { label: 'Documentação Antigravity', url: 'https://antigravity.google/docs' },
         ],
       },
       {
@@ -6845,7 +6847,7 @@ Se você editar o mesmo arquivo no Lovable E localmente, pode haver conflito. Pa
           { label: 'Sincronizar', description: 'Faça commit + push direto do Antigravity para o GitHub' },
         ],
         steps: [
-          'Acesse idx.google.com e faça login com sua conta Google',
+          'Acesse antigravity.google e faça login com sua conta Google',
           'Clique em "Import a repo" na tela inicial',
           'Cole a URL do repositório GitHub do seu projeto Lovable',
           'Aguarde o Antigravity clonar e configurar o ambiente (2-5 minutos na primeira vez)',
@@ -6859,7 +6861,7 @@ Se você editar o mesmo arquivo no Lovable E localmente, pode haver conflito. Pa
           'Quando estiver satisfeito, vá ao painel Source Control (Ctrl+Shift+G)',
           'Stage as mudanças (clique no +), escreva a mensagem do commit e clique em Commit',
           'Clique em "Sync Changes" (ou "Push") para enviar ao GitHub',
-          'Volte ao Lovable — ele detectará as mudanças automaticamente',
+          'Volte ao Lovable — ele detectará as mudanças automaticamente. Se não aparecerem, clique em "Sync" no painel do GitHub',
         ],
         content: `Este é o workflow completo para usar o Google Antigravity como IDE de desenvolvimento complementar ao Lovable.
 
