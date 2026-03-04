@@ -20,7 +20,7 @@ export function Hero({ onStart }: HeroProps) {
         <div className="flex items-center gap-2.5 mb-6" style={{ animation: 'fadeIn 0.8s ease both' }}>
           <div className="w-6 h-px bg-gradient-to-r from-[var(--fg-accent)] to-transparent" />
           <span className="font-mono text-[11px] font-medium text-[var(--fg-accent)] uppercase tracking-[0.12em]">
-            Construa Apps Jurídicos · Guia Interativo
+            Super Inteligênc[IA] · Construa Apps Jurídicos · Guia Interativo
           </span>
         </div>
 
@@ -49,8 +49,8 @@ export function Hero({ onStart }: HeroProps) {
           style={{ animation: 'fadeUp 0.8s ease 0.35s both' }}
         >
           {[
-            { icon: Layers, value: '10', label: 'Seções' },
-            { icon: BookOpen, value: '115', label: 'Tutoriais' },
+            { icon: Layers, value: '12', label: 'Seções' },
+            { icon: BookOpen, value: '176', label: 'Tutoriais' },
             { icon: Zap, value: '40+', label: 'Prompts Prontos' },
             { icon: Heart, value: '14', label: 'Apps Completos' },
           ].map((m, i) => (
