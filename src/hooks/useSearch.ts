@@ -34,6 +34,8 @@ export const popularSuggestions: Suggestion[] = [
   { query: 'design', label: 'Design e Interface', icon: 'palette' },
   { query: 'prazos', label: 'Controle de Prazos', icon: 'calendar' },
   { query: 'domínio', label: 'Domínio Personalizado', icon: 'globe' },
+  { query: 'claude code', label: 'Claude Code', icon: 'terminal' },
+  { query: 'economizar créditos', label: 'Economizar Créditos', icon: 'dollar-sign' },
 ]
 
 // ── Normalization ───────────────────────────────────────────
@@ -248,7 +250,26 @@ const synonyms: Record<string, string[]> = {
   'problema': ['problema', 'erro', 'bug', 'nao funciona', 'debug'],
   'prompt': ['prompt', 'instrucao', 'pedir', 'descrever', 'comando'],
   'legaltech': ['legaltech', 'startup', 'saas', 'juridico', 'tecnologia'],
-  'ia': ['ia', 'inteligencia artificial', 'lovable', 'claude', 'openai'],
+  'ia': ['ia', 'inteligencia artificial', 'lovable', 'claude', 'openai', 'agente', 'chatbot', 'rag'],
+  'claude code': ['claude code', 'cli', 'terminal', 'anthropic', 'economia', 'credito'],
+  'antigravity': ['antigravity', 'google', 'idx', 'firebase studio', 'ide', 'gemini', 'gratis'],
+  'codex': ['codex', 'openai', 'gpt', 'cli', 'terminal', 'economia'],
+  'agente ia': ['agente ia', 'agente', 'autonomo', 'tool', 'ferramenta', 'bot'],
+  'multi agentes': ['multi agentes', 'multi agente', 'orquestrador', 'crewai', 'langgraph'],
+  'rag': ['rag', 'retrieval', 'embedding', 'pgvector', 'vetor', 'busca semantica'],
+  'chatbot': ['chatbot', 'bot', 'assistente', 'chat', 'ia', 'conversa'],
+  'embedding': ['embedding', 'vetor', 'pgvector', 'rag', 'busca semantica'],
+  'crewai': ['crewai', 'langgraph', 'framework', 'agente', 'multi agente'],
+  'langgraph': ['langgraph', 'crewai', 'framework', 'agente', 'grafo'],
+  'gemini': ['gemini', 'google', 'antigravity', 'ia', 'modelo'],
+  'opus': ['opus', 'claude', 'anthropic', 'modelo', 'ia'],
+  'sonnet': ['sonnet', 'claude', 'anthropic', 'modelo', 'ia'],
+  'haiku': ['haiku', 'claude', 'anthropic', 'modelo', 'barato'],
+  'gpt': ['gpt', 'openai', 'codex', 'chatgpt', 'modelo'],
+  'token': ['token', 'custo', 'api', 'ia', 'preco'],
+  'pgvector': ['pgvector', 'vetor', 'embedding', 'rag', 'supabase'],
+  'claude.md': ['claude md', 'claudemd', 'config', 'claude code', 'instrucao'],
+  'agents.md': ['agents md', 'agentsmd', 'config', 'codex', 'instrucao'],
 
   // Apps jurídicos específicos
   'portal': ['portal', 'cliente', 'acesso', 'dashboard', 'login'],
@@ -393,6 +414,30 @@ const intentMap: Record<string, string[]> = {
   'lovable vs bolt': ['Lovable vs Outras Ferramentas'],
   'melhor plataforma': ['Lovable vs Outras Ferramentas'],
   'qual ferramenta': ['Lovable vs Outras Ferramentas'],
+
+  // IA no Lovable
+  'qual ia lovable usa': ['Claude: O Cérebro do Lovable', 'Modelos e Créditos de IA'],
+  'como funciona ia': ['Claude: O Cérebro do Lovable', 'Modelos e Créditos de IA'],
+  'criar chatbot': ['Construindo um Chatbot Jurídico com IA', 'Boas Práticas de IA para Apps Jurídicos'],
+  'busca inteligente': ['RAG: Pesquisa Jurisprudencial Inteligente'],
+  'pesquisa jurisprudencia': ['RAG: Pesquisa Jurisprudencial Inteligente'],
+  'agente ia': ['Criando Agentes IA Autônomos', 'Multi-Agentes IA Orquestrados'],
+  'multi agentes': ['Multi-Agentes IA Orquestrados', 'Frameworks de Agentes: CrewAI e LangGraph'],
+  'crewai langgraph': ['Frameworks de Agentes: CrewAI e LangGraph'],
+  'custo api ia': ['Custos e Otimização de APIs de IA', 'Modelos e Créditos de IA'],
+  'ia etica oab': ['Boas Práticas de IA para Apps Jurídicos'],
+
+  // Economizando créditos
+  'economizar credito lovable': ['A Estratégia: Lovable + GitHub + IA Externa', 'Dicas Avançadas para Economizar Créditos'],
+  'claude code': ['Lovable + Claude Code: Introdução', 'Lovable + Claude Code: Workflow Completo'],
+  'como usar claude code': ['Lovable + Claude Code: Introdução', 'Lovable + Claude Code: Workflow Completo'],
+  'antigravity lovable': ['Lovable + Google Antigravity: Introdução', 'Lovable + Google Antigravity: Workflow Completo'],
+  'como usar antigravity': ['Lovable + Google Antigravity: Introdução', 'Lovable + Google Antigravity: Workflow Completo'],
+  'codex lovable': ['Lovable + OpenAI Codex: Introdução', 'Lovable + OpenAI Codex: Workflow Completo'],
+  'como usar codex': ['Lovable + OpenAI Codex: Introdução', 'Lovable + OpenAI Codex: Workflow Completo'],
+  'comparar ferramentas ia': ['Comparativo: Claude Code vs Antigravity vs Codex'],
+  'gastar menos credito': ['Dicas Avançadas para Economizar Créditos', 'A Estratégia: Lovable + GitHub + IA Externa'],
+  'desenvolvimento externo': ['A Estratégia: Lovable + GitHub + IA Externa', 'Configurando o GitHub no Lovable'],
 }
 
 // ── Multi-field weighted scoring ────────────────────────────
@@ -638,6 +683,30 @@ const relatedMap: Record<string, string[]> = {
   'GitHub: Versionamento do App': ['Backup e Versionamento', 'Ambientes de Teste', 'CI/CD e Automação'],
   'Knowledge Base': ['Anatomia de um Prompt Eficaz', 'Técnicas Expert de Prompting'],
   'Edge Functions': ['Edge Functions Avançadas', 'Webhooks e APIs Externas', 'Resend: Emails Automáticos'],
+
+  // Seção 11 — IA no Lovable
+  'Claude: O Cérebro do Lovable': ['Modelos e Créditos de IA', 'Knowledge Base Avançado', 'Construindo um Chatbot Jurídico com IA'],
+  'Modelos e Créditos de IA': ['Claude: O Cérebro do Lovable', 'Custos e Otimização de APIs de IA', 'Dicas Avançadas para Economizar Créditos'],
+  'Knowledge Base Avançado': ['Claude: O Cérebro do Lovable', 'Anatomia de um Prompt Eficaz', 'Técnicas Expert de Prompting'],
+  'Construindo um Chatbot Jurídico com IA': ['RAG: Pesquisa Jurisprudencial Inteligente', 'Criando Agentes IA Autônomos', 'Boas Práticas de IA para Apps Jurídicos'],
+  'RAG: Pesquisa Jurisprudencial Inteligente': ['Construindo um Chatbot Jurídico com IA', 'Criando Agentes IA Autônomos', 'Custos e Otimização de APIs de IA'],
+  'Criando Agentes IA Autônomos': ['Multi-Agentes IA Orquestrados', 'Frameworks de Agentes: CrewAI e LangGraph', 'Construindo um Chatbot Jurídico com IA'],
+  'Multi-Agentes IA Orquestrados': ['Criando Agentes IA Autônomos', 'Frameworks de Agentes: CrewAI e LangGraph', 'Custos e Otimização de APIs de IA'],
+  'Frameworks de Agentes: CrewAI e LangGraph': ['Criando Agentes IA Autônomos', 'Multi-Agentes IA Orquestrados', 'Edge Functions'],
+  'Custos e Otimização de APIs de IA': ['Modelos e Créditos de IA', 'Boas Práticas de IA para Apps Jurídicos', 'Dicas Avançadas para Economizar Créditos'],
+  'Boas Práticas de IA para Apps Jurídicos': ['Custos e Otimização de APIs de IA', 'Construindo um Chatbot Jurídico com IA', 'LGPD e Apps Jurídicos'],
+
+  // Seção 12 — Economizando Créditos
+  'A Estratégia: Lovable + GitHub + IA Externa': ['Configurando o GitHub no Lovable', 'Lovable + Claude Code: Introdução', 'Comparativo: Claude Code vs Antigravity vs Codex'],
+  'Configurando o GitHub no Lovable': ['A Estratégia: Lovable + GitHub + IA Externa', 'GitHub: Versionamento do App', 'Lovable + Claude Code: Workflow Completo'],
+  'Lovable + Claude Code: Introdução': ['Lovable + Claude Code: Workflow Completo', 'A Estratégia: Lovable + GitHub + IA Externa', 'Comparativo: Claude Code vs Antigravity vs Codex'],
+  'Lovable + Claude Code: Workflow Completo': ['Lovable + Claude Code: Introdução', 'Configurando o GitHub no Lovable', 'Dicas Avançadas para Economizar Créditos'],
+  'Lovable + Google Antigravity: Introdução': ['Lovable + Google Antigravity: Workflow Completo', 'A Estratégia: Lovable + GitHub + IA Externa', 'Comparativo: Claude Code vs Antigravity vs Codex'],
+  'Lovable + Google Antigravity: Workflow Completo': ['Lovable + Google Antigravity: Introdução', 'Configurando o GitHub no Lovable', 'Dicas Avançadas para Economizar Créditos'],
+  'Lovable + OpenAI Codex: Introdução': ['Lovable + OpenAI Codex: Workflow Completo', 'A Estratégia: Lovable + GitHub + IA Externa', 'Comparativo: Claude Code vs Antigravity vs Codex'],
+  'Lovable + OpenAI Codex: Workflow Completo': ['Lovable + OpenAI Codex: Introdução', 'Configurando o GitHub no Lovable', 'Dicas Avançadas para Economizar Créditos'],
+  'Comparativo: Claude Code vs Antigravity vs Codex': ['Lovable + Claude Code: Introdução', 'Lovable + Google Antigravity: Introdução', 'Lovable + OpenAI Codex: Introdução'],
+  'Dicas Avançadas para Economizar Créditos': ['A Estratégia: Lovable + GitHub + IA Externa', 'Comparativo: Claude Code vs Antigravity vs Codex', 'Otimização de Créditos'],
 }
 
 export function getRelatedCards(cardTitle: string): string[] {

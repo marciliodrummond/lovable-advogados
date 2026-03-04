@@ -5964,4 +5964,1174 @@ Use React Hook Form + Zod para validacao, shadcn/ui para todos os inputs, steppe
       },
     ],
   },
+  // ═══════════════════════════════════════════════════════════
+  // SEÇÃO 11: LOVABLE E INTELIGÊNCIA ARTIFICIAL
+  // ═══════════════════════════════════════════════════════════
+  {
+    id: 'ia-lovable',
+    title: 'Lovable e Inteligência Artificial',
+    description: 'IA por trás do Lovable e como construir features inteligentes',
+    icon: 'cpu',
+    cards: [
+      {
+        title: 'Claude: O Cérebro do Lovable',
+        subtitle: 'Entenda qual IA alimenta o Lovable e como ela funciona',
+        level: 'iniciante',
+        icon: 'brain',
+        analogy: {
+          title: 'Analogia Jurídica',
+          central: 'O Estagiário Genial',
+          description: 'Imagine um estagiário que leu todas as leis, doutrinas e jurisprudências do mundo, entende qualquer pedido em português natural e redige peças impecáveis em segundos. O Claude é esse "estagiário" por trás do Lovable — ele interpreta seus prompts e gera código real.',
+        },
+        elementGrid: [
+          { icon: 'brain', title: 'Claude Opus 4.6', description: 'Usado no Agent Mode — o modelo mais poderoso, gera apps completos e resolve problemas complexos', highlight: true },
+          { icon: 'zap', title: 'Claude Sonnet', description: 'Usado no modo padrão — equilibra velocidade e qualidade para a maioria das tarefas' },
+          { icon: 'message-square', title: 'Claude Opus (Chat)', description: 'Usado no Chat Mode — ideal para debugar, investigar e planejar sem gastar créditos de geração' },
+        ],
+        content: `O **Lovable** é alimentado pela família de modelos **Claude**, da Anthropic — a mesma empresa que criou o Claude Code e o Claude.ai.
+
+**Como os modelos são usados no Lovable:**
+
+| Modo | Modelo | Quando Usar |
+|------|--------|-------------|
+| **Agent Mode** | Claude Opus 4.6 | Construir features completas, gerar páginas, criar lógica complexa |
+| **Standard** | Claude Sonnet 3.7/4.5 | Tarefas do dia a dia, ajustes, correções |
+| **Chat Mode** | Claude Opus 4.5 | Investigar problemas, planejar, tirar dúvidas sobre o código |
+
+**O que isso significa na prática:**
+
+Quando você digita um prompt no Lovable, ele é enviado para o Claude, que analisa seu pedido, entende o contexto do projeto (código existente, banco de dados, componentes) e gera código React + TypeScript + Tailwind CSS de alta qualidade.
+
+**Por que o Claude é bom para apps jurídicos:**
+
+- **Entende português** — interpreta termos jurídicos como "petição inicial", "audiência de instrução", "RLS por OAB"
+- **Contextual** — lembra do seu projeto inteiro e gera código consistente
+- **Seguro** — treinado para gerar código seguro por padrão (validações, proteções)
+- **Iterativo** — aceita refinamentos ("agora mude a cor", "adicione um filtro por data")`,
+        tips: [
+          'O Lovable escolhe automaticamente o melhor modelo para cada situação',
+          'Você não precisa saber nada sobre IA para usar o Lovable — basta escrever prompts claros',
+          'O Claude entende contexto: quanto mais você constrói, melhor ele entende seu projeto',
+          'Para tarefas simples, use Visual Edits (grátis) em vez de gastar créditos com o Claude',
+        ],
+        links: [
+          { label: 'Documentação do Claude', url: 'https://docs.anthropic.com' },
+          { label: 'Modelos Anthropic', url: 'https://docs.anthropic.com/en/docs/about-claude/models' },
+          { label: 'Blog do Lovable sobre IA', url: 'https://lovable.dev/blog' },
+        ],
+      },
+      {
+        title: 'Modelos e Créditos de IA',
+        subtitle: 'Quanto custa cada interação e como otimizar seu uso',
+        level: 'iniciante',
+        icon: 'credit-card',
+        refTable: [
+          { feature: 'Agent Mode (Opus)', description: 'Gera código completo, features inteiras, apps do zero', config: '~5-15 créditos por interação' },
+          { feature: 'Standard (Sonnet)', description: 'Ajustes, correções, pequenas adições', config: '~2-5 créditos por interação' },
+          { feature: 'Chat Mode', description: 'Conversar, debugar, planejar — SEM alterar código', config: 'Baixo custo ou grátis' },
+          { feature: 'Visual Edits', description: 'Arrastar, clicar, editar texto e cores', config: 'Totalmente grátis' },
+          { feature: 'Plan Mode', description: 'Planejar a estratégia antes de construir', config: 'Baixo custo' },
+        ],
+        content: `Cada modelo de IA tem um custo diferente. O Lovable gerencia isso automaticamente, mas entender os custos ajuda a economizar créditos.
+
+**Como os créditos são consumidos:**
+
+Cada prompt que você envia ao Lovable consome créditos proporcionais à complexidade da tarefa e ao modelo utilizado. Prompts maiores e mais complexos gastam mais créditos.
+
+**Estratégia de economia:**
+
+| Estratégia | Economia | Como |
+|-----------|----------|------|
+| **Visual Edits** | 100% | Arraste, clique, edite texto sem IA |
+| **Chat Mode** | ~80% | Investigue antes de pedir mudanças |
+| **Plan Mode** | ~50% | Planeje antes, execute uma vez |
+| **Prompts detalhados** | ~30% | Menos iterações = menos créditos |
+| **Knowledge Base** | ~20% | Diretrizes reduzem retrabalho |
+
+**Dica de ouro:** A combinação Chat Mode (investigar) → Plan Mode (planejar) → Agent Mode (executar) → Visual Edits (polir) é a mais eficiente em créditos.
+
+**Quanto custa na prática:**
+
+Um app jurídico completo (portal de clientes com login, gestão de processos, prazos e honorários) consome tipicamente entre 200-400 créditos no plano Pro — equivalente a 1-2 semanas de uso.`,
+        tips: [
+          'Visual Edits são GRÁTIS — use sempre que possível para ajustes visuais',
+          'Chat Mode gasta muito menos créditos que Agent Mode',
+          'Um prompt bem escrito gasta o mesmo que 3 prompts vagos — invista em clareza',
+          'Plan Mode ajuda a economizar pois você valida a estratégia antes de construir',
+          'Monitore seu uso em Settings → Usage no Lovable',
+        ],
+      },
+      {
+        title: 'Knowledge Base Avançado',
+        subtitle: 'Ensine o Lovable sobre seu escritório, regras e padrões',
+        level: 'intermediario',
+        icon: 'book-marked',
+        steps: [
+          'Acesse seu projeto no Lovable e clique em "Knowledge Base" (ícone de livro no painel lateral)',
+          'Clique em "Add Knowledge" para criar uma nova entrada',
+          'Dê um nome descritivo: ex. "Padrões do Escritório Silva & Associados"',
+          'Escreva as diretrizes em linguagem natural — o Claude vai interpretá-las em cada prompt',
+          'Inclua terminologia jurídica específica do seu escritório (ex. "sempre use petição inicial e nunca PI")',
+          'Defina padrões de design: "usar cores azul marinho e branco, fonte formal, tom profissional"',
+          'Adicione regras de negócio: "prazos críticos devem aparecer em vermelho, prazos normais em amarelo"',
+          'Documente a estrutura do banco: "tabela processos tem colunas: id, numero_cnj, tipo, status, cliente_id"',
+          'Salve e teste: faça um prompt que dependa das diretrizes e verifique se o Claude as segue',
+          'Mantenha atualizado: revise a Knowledge Base a cada 2 semanas para refletir mudanças no projeto',
+        ],
+        content: `O **Knowledge Base** é uma das funcionalidades mais poderosas do Lovable. Ele permite que você "ensine" o Claude sobre seu projeto, escritório e preferências — sem precisar repetir instruções em cada prompt.
+
+**O que incluir na Knowledge Base:**
+
+| Categoria | Exemplos |
+|-----------|----------|
+| **Terminologia** | "Use 'processo' e não 'caso'", "RLS = Row Level Security" |
+| **Padrões de design** | "Cores: azul #1e3a5f e branco #ffffff", "Fonte: Inter" |
+| **Regras de negócio** | "Prazos < 3 dias = urgente", "Honorários mínimos = R$ 500" |
+| **Estrutura do banco** | Nomes de tabelas, colunas e relacionamentos |
+| **Tom e linguagem** | "Tom formal", "Tratamento: Exmo./Exma.", "Português BR" |
+| **Restrições** | "Nunca mostrar dados de um cliente para outro", "Sempre validar OAB" |
+
+**Por que usar:**
+
+Sem Knowledge Base, você precisa repetir instruções em cada prompt. Com Knowledge Base, o Claude já sabe suas preferências e gera código alinhado desde a primeira interação.`,
+        tips: [
+          'Comece simples: 3-5 diretrizes já fazem grande diferença',
+          'Seja específico: "cor azul" é vago, "#1e3a5f para headers" é preciso',
+          'Inclua termos jurídicos: o Claude entende, mas pode usar variações se você não padronizar',
+          'A Knowledge Base é por projeto — cada app pode ter suas próprias diretrizes',
+          'Teste sempre: faça um prompt e verifique se as diretrizes foram respeitadas',
+        ],
+        links: [
+          { label: 'Docs: Knowledge Base', url: 'https://docs.lovable.dev/features/knowledge-base' },
+        ],
+      },
+      {
+        title: 'Construindo um Chatbot Jurídico com IA',
+        subtitle: 'Crie um assistente inteligente que responde perguntas dos seus clientes',
+        level: 'intermediario',
+        icon: 'bot',
+        flowSteps: [
+          { label: 'Interface', description: 'Crie a tela de chat com campo de input e balões de mensagens' },
+          { label: 'Backend', description: 'Configure uma Edge Function no Supabase que chama a API do Claude' },
+          { label: 'Contexto', description: 'Alimente o chatbot com dados do escritório (FAQs, serviços, prazos)' },
+          { label: 'Deploy', description: 'Publique e disponibilize para seus clientes via portal' },
+        ],
+        steps: [
+          'No Lovable, peça: "Crie uma tela de chat com campo de mensagem embaixo e balões de conversa acima, estilo WhatsApp"',
+          'Adicione um estado para armazenar o histórico de mensagens: array de objetos {role, content, timestamp}',
+          'Crie uma Edge Function no Supabase chamada "chat-juridico" para processar as mensagens',
+          'Na Edge Function, configure a chamada à API do Claude com um system prompt jurídico',
+          'Defina o system prompt: "Você é assistente jurídico do escritório X. Responda sobre serviços, prazos e procedimentos. Nunca dê conselho jurídico específico — oriente o cliente a agendar consulta."',
+          'Conecte o frontend à Edge Function: ao enviar mensagem, chame a function e exiba a resposta',
+          'Adicione indicador de "digitando..." enquanto a IA processa a resposta',
+          'Implemente histórico: salve as conversas no Supabase para referência futura',
+          'Configure RLS para que cada cliente só veja suas próprias conversas',
+          'Adicione botões de ação rápida: "Agendar consulta", "Ver prazos", "Falar com advogado"',
+          'Teste exaustivamente: envie perguntas comuns e verifique se as respostas são adequadas',
+          'Configure limites: máximo de mensagens por dia para controlar custos de API',
+        ],
+        prompt: `Crie uma tela de chat estilo WhatsApp para um chatbot jurídico:
+- Campo de input na parte inferior com botão de enviar
+- Balões de mensagem: azul para o cliente, cinza para o bot
+- Indicador de "digitando..." quando aguardando resposta
+- Botões de ação rápida no topo: "Agendar Consulta", "Ver Serviços", "Falar com Advogado"
+- Histórico de mensagens com scroll automático
+- Avatar do bot com ícone de balança da justiça
+- Mensagem de boas-vindas automática ao abrir o chat`,
+        content: `Um chatbot jurídico é uma das features de IA mais úteis para escritórios de advocacia. Ele pode responder perguntas frequentes dos clientes 24/7, agendar consultas e coletar informações iniciais — tudo sem intervenção humana.
+
+**Arquitetura:**
+
+\`\`\`
+Cliente → Chat UI (Lovable) → Edge Function (Supabase) → API Claude → Resposta
+\`\`\`
+
+**Custos de API:**
+
+| Modelo | Custo por 1K tokens | Estimativa por conversa |
+|--------|---------------------|------------------------|
+| Claude Haiku | ~$0.25/1M input | ~$0.002 por conversa |
+| Claude Sonnet | ~$3/1M input | ~$0.02 por conversa |
+| GPT-4o mini | ~$0.15/1M input | ~$0.001 por conversa |
+
+**Dica:** Use Claude Haiku ou GPT-4o mini para chatbots — são rápidos, baratos e suficientes para FAQs jurídicas.
+
+**Importante:** O chatbot NÃO substitui consultoria jurídica. Configure-o para informar sobre serviços, prazos e procedimentos, mas sempre oriente o cliente a agendar consulta para questões específicas.`,
+        tips: [
+          'Use Claude Haiku para chatbots — é rápido e barato (centavos por conversa)',
+          'NUNCA permita que o chatbot dê conselho jurídico — isso viola a ética da OAB',
+          'Configure um limite de mensagens diárias para controlar custos',
+          'Salve conversas no banco — elas são ouro para entender o que seus clientes perguntam',
+          'Adicione FAQ pré-definidas para reduzir chamadas à API',
+        ],
+      },
+      {
+        title: 'RAG: Pesquisa Jurisprudencial Inteligente',
+        subtitle: 'Busca semântica em documentos jurídicos usando vetores e IA',
+        level: 'avancado',
+        icon: 'search',
+        flowSteps: [
+          { label: 'Ingestão', description: 'Upload de documentos jurídicos (PDFs, petições, jurisprudência) para o banco' },
+          { label: 'Chunking', description: 'Divide os documentos em trechos menores (500-1000 tokens cada)' },
+          { label: 'Embedding', description: 'Transforma cada trecho em um vetor numérico usando API de embeddings' },
+          { label: 'Busca', description: 'Quando o usuário pesquisa, gera embedding da query e busca vetores similares' },
+          { label: 'Geração', description: 'Envia os trechos relevantes ao Claude, que gera uma resposta contextualizada' },
+        ],
+        prompt: `Crie uma interface de pesquisa jurisprudencial inteligente:
+- Campo de busca grande no topo com placeholder "Pesquisar jurisprudência..."
+- Filtros laterais: tribunal, área do direito, período, relator
+- Resultados com relevância (score), trecho destacado e link para o inteiro teor
+- Botão "Perguntar à IA" que gera uma análise do resultado usando Claude
+- Indicador de quantos documentos foram consultados
+- Design profissional com ícones de balança`,
+        content: `**RAG (Retrieval-Augmented Generation)** é a técnica que permite ao ChatGPT, Claude e outros modelos "consultar" documentos específicos antes de responder. Para escritórios de advocacia, isso significa criar uma busca inteligente em jurisprudência, doutrinas e peças processuais.
+
+**Como funciona o RAG jurídico:**
+
+1. **Ingestão:** Seus documentos (PDFs de jurisprudência, petições, doutrinas) são processados
+2. **Chunking:** Cada documento é dividido em trechos menores (parágrafos, seções)
+3. **Embedding:** Cada trecho vira um vetor numérico (array de 1536 números)
+4. **Armazenamento:** Vetores são salvos no Supabase usando a extensão **pgvector**
+5. **Busca:** Quando alguém pesquisa "prazo para recurso especial", a busca encontra trechos semanticamente similares — mesmo que usem palavras diferentes
+6. **Geração:** Os trechos relevantes são enviados ao Claude, que sintetiza uma resposta
+
+**Setup técnico no Supabase:**
+
+\`\`\`sql
+-- Habilitar extensão pgvector
+create extension if not exists vector;
+
+-- Tabela de documentos com embeddings
+create table documentos_juridicos (
+  id uuid primary key default gen_random_uuid(),
+  titulo text not null,
+  conteudo text not null,
+  embedding vector(1536),
+  tribunal text,
+  area_direito text,
+  data_publicacao date,
+  created_at timestamptz default now()
+);
+
+-- Índice para busca rápida
+create index on documentos_juridicos
+  using ivfflat (embedding vector_cosine_ops);
+\`\`\`
+
+**Vantagem vs busca tradicional:** A busca por palavras-chave retorna "prazo recurso especial" mas não encontra "tempo para interpor REsp". A busca vetorial (RAG) encontra ambos, porque entende o significado.`,
+        tips: [
+          'Use pgvector no Supabase — já vem integrado, sem custo extra',
+          'Embeddings da OpenAI (text-embedding-3-small) custam ~$0.02 por milhão de tokens',
+          'Chunks de 500-1000 tokens com overlap de 100 tokens dão os melhores resultados',
+          'Comece com jurisprudência do STJ/STF — são públicas e têm alta qualidade textual',
+          'RAG é avançado mas extremamente valioso para escritórios com grande volume documental',
+        ],
+        links: [
+          { label: 'Supabase: pgvector Guide', url: 'https://supabase.com/docs/guides/ai/vector-columns' },
+          { label: 'OpenAI Embeddings', url: 'https://platform.openai.com/docs/guides/embeddings' },
+        ],
+      },
+      {
+        title: 'Criando Agentes IA Autônomos',
+        subtitle: 'Construa agentes que executam tarefas jurídicas automaticamente',
+        level: 'avancado',
+        icon: 'bot',
+        elementGrid: [
+          { icon: 'brain', title: 'Raciocínio (LLM)', description: 'O agente usa um modelo de IA (Claude/GPT) para entender tarefas e tomar decisões', highlight: true },
+          { icon: 'wrench', title: 'Ferramentas (Tools)', description: 'Acesso a APIs externas, banco de dados, envio de emails e consultas web' },
+          { icon: 'database', title: 'Memória (Context)', description: 'O agente lembra de interações anteriores e mantém estado entre execuções' },
+          { icon: 'repeat', title: 'Loop de Ação', description: 'Ciclo pensar → agir → observar → pensar novamente até completar a tarefa' },
+        ],
+        content: `**Agentes IA** são programas que usam modelos de linguagem para executar tarefas de forma autônoma. Diferente de um chatbot (que só responde perguntas), um agente pode tomar decisões, usar ferramentas e completar workflows inteiros.
+
+**Exemplos de agentes jurídicos:**
+
+| Agente | O que Faz | Ferramentas |
+|--------|-----------|-------------|
+| **Triagem de Casos** | Analisa email do cliente e classifica por área/urgência | Email API + Claude |
+| **Pesquisa de Prazos** | Consulta DataJud e alerta sobre prazos próximos | DataJud API + Supabase |
+| **Gerador de Peças** | Cria minutas de petições baseado em modelo e dados do caso | Claude + Templates |
+| **Monitor de Publicações** | Acompanha DJe e notifica sobre publicações relevantes | Web scraping + Email |
+
+**Arquitetura básica de um agente:**
+
+\`\`\`
+Loop Principal:
+1. RECEBER tarefa (ex: "analise este contrato")
+2. PENSAR sobre a tarefa (Claude processa o pedido)
+3. AGIR executando uma ferramenta (consultar banco, chamar API)
+4. OBSERVAR o resultado da ação
+5. REPETIR até a tarefa estar concluída
+6. RETORNAR resultado final ao usuário
+\`\`\`
+
+**Implementação no Lovable + Supabase:**
+
+Os agentes são implementados como **Edge Functions** no Supabase que:
+1. Recebem a tarefa via API
+2. Chamam o Claude com system prompt especializado
+3. Usam function calling para executar ações
+4. Salvam resultados no banco
+5. Notificam o usuário (email, push, in-app)
+
+**Diferença chatbot vs agente:**
+
+| Característica | Chatbot | Agente |
+|---------------|---------|--------|
+| **Interação** | Responde perguntas | Executa tarefas |
+| **Autonomia** | Nenhuma | Alta |
+| **Ferramentas** | Nenhuma | APIs, banco, email |
+| **Loop** | Pergunta → Resposta | Pensar → Agir → Observar |
+| **Complexidade** | Baixa | Média-Alta |`,
+        tips: [
+          'Comece com agentes simples: um que classifica emails ou monitora prazos',
+          'Use function calling do Claude para dar ferramentas ao agente',
+          'Sempre inclua um limite de iterações (ex: máximo 10 loops) para evitar custos infinitos',
+          'Salve logs de cada ação do agente para auditoria e debug',
+          'Agentes jurídicos devem sempre ter supervisão humana — nunca ação final automática',
+        ],
+      },
+      {
+        title: 'Multi-Agentes IA Orquestrados',
+        subtitle: 'Sistemas onde vários agentes IA colaboram para resolver problemas complexos',
+        level: 'expert',
+        icon: 'network',
+        flowSteps: [
+          { label: 'Orquestrador', description: 'Um agente central recebe a tarefa e decide quais especialistas acionar' },
+          { label: 'Especialistas', description: 'Agentes especializados executam sub-tarefas (pesquisa, análise, redação)' },
+          { label: 'Colaboração', description: 'Resultados são compartilhados entre agentes via memória compartilhada' },
+          { label: 'Síntese', description: 'O orquestrador consolida os resultados e entrega ao usuário' },
+        ],
+        content: `**Multi-agentes** é um padrão arquitetural onde vários agentes IA trabalham juntos para resolver problemas que seriam complexos demais para um único agente.
+
+**Exemplo prático — Análise de Contrato:**
+
+\`\`\`
+Tarefa: "Analise este contrato de prestação de serviços"
+
+Orquestrador recebe tarefa
+  ├── Agente Extrator: extrai cláusulas, partes, valores, prazos
+  ├── Agente Risco: avalia cláusulas abusivas e riscos
+  ├── Agente Comparador: compara com contratos similares do banco
+  └── Agente Redator: gera parecer consolidado
+
+Resultado: Parecer completo com riscos, sugestões e comparativos
+\`\`\`
+
+**Padrões de orquestração:**
+
+| Padrão | Descrição | Uso |
+|--------|-----------|-----|
+| **Sequencial** | Agente A → B → C | Pipeline linear, cada etapa depende da anterior |
+| **Paralelo** | A + B + C simultaneamente | Tarefas independentes executadas ao mesmo tempo |
+| **Hierárquico** | Orquestrador delega a especialistas | Tarefas complexas com sub-problemas distintos |
+| **Debate** | Agentes argumentam entre si | Análise de risco, revisão de cláusulas |
+
+**Implementação com Edge Functions:**
+
+No Supabase, cada agente é uma Edge Function separada. O orquestrador é outra Edge Function que:
+1. Recebe a tarefa
+2. Decide quais agentes acionar
+3. Chama as Edge Functions dos especialistas (em paralelo quando possível)
+4. Coleta e consolida os resultados
+5. Retorna o resultado final
+
+**Custos de multi-agentes:**
+
+Como cada agente faz chamadas ao LLM, os custos se multiplicam. Uma análise de contrato com 4 agentes pode custar 4x mais que um agente único. A vantagem é a qualidade: cada agente é especialista no que faz.`,
+        tips: [
+          'Multi-agentes são para cenários complexos — não use para tarefas simples',
+          'Comece com 2 agentes e escale gradualmente',
+          'Use modelos baratos (Haiku) para agentes de triagem e extração',
+          'Reserve modelos poderosos (Opus) para agentes de análise e síntese',
+          'Sempre inclua timeout e fallback — se um agente falhar, o sistema deve continuar',
+        ],
+      },
+      {
+        title: 'Frameworks de Agentes: CrewAI e LangGraph',
+        subtitle: 'Ferramentas populares para construir sistemas multi-agentes',
+        level: 'expert',
+        icon: 'workflow',
+        refTable: [
+          { feature: 'CrewAI', description: 'Framework Python para agentes colaborativos com roles e goals definidos', config: 'Mais fácil, ideal para começar' },
+          { feature: 'LangGraph', description: 'Framework do LangChain para grafos de agentes com estado compartilhado', config: 'Mais flexível, ideal para fluxos complexos' },
+          { feature: 'Autogen (Microsoft)', description: 'Framework para conversações entre agentes com supervisão humana', config: 'Bom para fluxos conversacionais' },
+          { feature: 'Edge Functions', description: 'Implementação manual no Supabase sem framework externo', config: 'Mais controle, mais trabalho' },
+        ],
+        content: `Frameworks de agentes facilitam a construção de sistemas multi-agentes sem precisar implementar toda a lógica de orquestração do zero.
+
+**CrewAI — O mais popular:**
+
+\`\`\`python
+# Exemplo conceitual de CrewAI para análise jurídica
+from crewai import Agent, Task, Crew
+
+pesquisador = Agent(
+    role="Pesquisador Jurídico",
+    goal="Encontrar jurisprudência relevante",
+    backstory="Especialista em pesquisa de precedentes"
+)
+
+analista = Agent(
+    role="Analista de Risco",
+    goal="Avaliar riscos e cláusulas abusivas",
+    backstory="20 anos de experiência em contratos"
+)
+
+crew = Crew(agents=[pesquisador, analista], tasks=[...])
+resultado = crew.kickoff()
+\`\`\`
+
+**LangGraph — O mais flexível:**
+
+\`\`\`python
+# Exemplo conceitual de LangGraph
+from langgraph.graph import StateGraph
+
+workflow = StateGraph(ContractState)
+workflow.add_node("extrair", extrair_clausulas)
+workflow.add_node("analisar", analisar_riscos)
+workflow.add_node("redigir", redigir_parecer)
+
+workflow.add_edge("extrair", "analisar")
+workflow.add_edge("analisar", "redigir")
+\`\`\`
+
+**Comparativo detalhado:**
+
+| Critério | CrewAI | LangGraph | Edge Functions |
+|----------|--------|-----------|----------------|
+| **Curva de aprendizado** | Fácil | Média | Depende |
+| **Linguagem** | Python | Python | TypeScript |
+| **Orquestração** | Automática | Manual (grafos) | Manual |
+| **Integração Lovable** | Via API externa | Via API externa | Nativa (Supabase) |
+| **Custo** | Open source | Open source | Grátis no Supabase |
+| **Melhor para** | Prototipagem rápida | Fluxos complexos | Integração direta |
+
+**Recomendação para advogados:** Se você está começando com agentes, use **Edge Functions direto no Supabase** — é TypeScript (mesma linguagem do Lovable), não precisa de servidor externo e integra nativamente. Quando seus agentes ficarem complexos, considere CrewAI ou LangGraph.`,
+        tips: [
+          'Para começar, Edge Functions no Supabase são suficientes e não exigem servidor extra',
+          'CrewAI é o framework mais fácil de aprender se você quiser Python',
+          'LangGraph dá mais controle mas exige mais conhecimento técnico',
+          'Todos os frameworks suportam Claude como LLM — a escolha é de orquestração',
+          'Frameworks externos precisam rodar em servidor próprio (Railway, Fly.io, etc.)',
+        ],
+        links: [
+          { label: 'CrewAI Documentation', url: 'https://docs.crewai.com' },
+          { label: 'LangGraph Documentation', url: 'https://langchain-ai.github.io/langgraph/' },
+        ],
+      },
+      {
+        title: 'Custos e Otimização de APIs de IA',
+        subtitle: 'Quanto custa integrar IA no seu app e como reduzir gastos',
+        level: 'intermediario',
+        icon: 'dollar-sign',
+        refTable: [
+          { feature: 'Claude Haiku', description: 'Respostas rápidas, chatbots, classificação', config: '~$0.25/1M input tokens' },
+          { feature: 'Claude Sonnet', description: 'Análise, geração de texto, agentes simples', config: '~$3/1M input tokens' },
+          { feature: 'Claude Opus', description: 'Tarefas complexas, análise jurídica profunda', config: '~$15/1M input tokens' },
+          { feature: 'GPT-4o mini', description: 'Alternativa barata para tarefas simples', config: '~$0.15/1M input tokens' },
+          { feature: 'Gemini Flash', description: 'Alternativa Google, rápido e barato', config: '~$0.075/1M input tokens' },
+          { feature: 'Embeddings (OpenAI)', description: 'Transformar texto em vetores para RAG', config: '~$0.02/1M tokens' },
+        ],
+        content: `Integrar IA ao seu app jurídico tem custos de API que variam conforme o modelo e volume de uso. Aqui está um guia prático para planejar seus custos.
+
+**Estimativa de custos por feature:**
+
+| Feature | Modelo Recomendado | Custo Estimado/mês |
+|---------|-------------------|-------------------|
+| **Chatbot FAQ** | Haiku / GPT-4o mini | R$ 5-20/mês (500 conversas) |
+| **Análise de contrato** | Sonnet / GPT-4o | R$ 20-80/mês (100 contratos) |
+| **RAG jurisprudencial** | Embeddings + Haiku | R$ 10-30/mês (1000 buscas) |
+| **Geração de petições** | Sonnet / Opus | R$ 30-100/mês (50 petições) |
+| **Triagem de emails** | Haiku | R$ 2-10/mês (500 emails) |
+
+**Estratégias de otimização:**
+
+1. **Use o modelo certo:** Haiku para tarefas simples, Sonnet para médias, Opus só para complexas
+2. **Cache de respostas:** Salve respostas frequentes no banco e reutilize
+3. **Prompt compacto:** Remova texto desnecessário do prompt — cada token custa
+4. **Batch processing:** Agrupe múltiplas tarefas em uma chamada quando possível
+5. **Rate limiting:** Limite chamadas por usuário/dia para evitar surpresas na fatura
+
+**Dica:** A maioria dos escritórios gasta menos de R$ 100/mês em APIs de IA. O retorno (horas economizadas) compensa amplamente.`,
+        tips: [
+          'Comece com modelos baratos (Haiku/GPT-4o mini) e só escale se a qualidade não for suficiente',
+          'Cache de respostas pode reduzir custos em 50-70% para perguntas repetitivas',
+          'Monitore gastos semanalmente nas primeiras 4 semanas para calibrar',
+          'Um limite de R$ 50/mês é um bom ponto de partida para um escritório pequeno',
+          'APIs de IA se pagam se economizarem 2-3 horas de trabalho manual por mês',
+        ],
+      },
+      {
+        title: 'Boas Práticas de IA para Apps Jurídicos',
+        subtitle: 'Checklist de segurança, ética e qualidade para IA na advocacia',
+        level: 'avancado',
+        icon: 'shield',
+        checklist: [
+          {
+            title: 'Segurança e Privacidade',
+            items: [
+              'Nunca envie dados pessoais de clientes diretamente ao LLM — anonimize antes',
+              'Use Edge Functions (server-side) para chamadas de API — nunca exponha chaves no frontend',
+              'Implemente rate limiting para evitar abuso e custos descontrolados',
+              'Salve logs de todas as interações com IA para auditoria',
+              'Configure timeout em chamadas de API (máximo 30 segundos)',
+              'Valide e sanitize toda resposta do LLM antes de exibir ao usuário',
+              'Use HTTPS para todas as chamadas de API',
+            ],
+          },
+          {
+            title: 'Ética e Compliance OAB',
+            items: [
+              'IA nunca deve substituir o advogado — sempre como ferramenta auxiliar',
+              'Chatbots devem informar que são IA e orientar consulta presencial para questões específicas',
+              'Respostas de IA devem ter aviso: "Gerado por IA — consulte um advogado para orientação específica"',
+              'Não use IA para decisões finais sobre prazos processuais — sempre verificação humana',
+              'Mantenha registro de quando e como IA foi usada em cada caso (transparência)',
+              'Revise periodicamente as respostas da IA para garantir precisão jurídica',
+              'Obtenha consentimento do cliente antes de processar seus dados com IA',
+            ],
+          },
+        ],
+        content: `Integrar IA em apps jurídicos exige cuidados extras de segurança, ética e compliance. A OAB e o CNJ ainda estão regulamentando o uso de IA na advocacia, mas já existem diretrizes claras.
+
+**Princípio fundamental:** IA é ferramenta, não substituto. O advogado é sempre o responsável final por qualquer orientação, petição ou decisão.
+
+**Regulamentação atual:**
+
+| Órgão | Posição |
+|-------|---------|
+| **OAB** | IA permitida como ferramenta auxiliar; vedado substituir o advogado |
+| **CNJ** | Resolução 332/2020 — IA no Judiciário deve ser transparente e auditável |
+| **LGPD** | Dados pessoais processados por IA devem seguir as mesmas regras de proteção |
+
+**Padrão recomendado para respostas de IA:**
+
+Toda resposta gerada por IA no seu app deve incluir:
+1. Indicação visual de que foi gerada por IA (ícone + texto)
+2. Aviso de que não substitui consultoria jurídica profissional
+3. Botão para "Falar com advogado" para questões específicas
+4. Timestamp e modelo usado (para auditoria)
+
+**Erros comuns a evitar:**
+
+- Expor API keys no frontend (qualquer um pode ver e usar)
+- Enviar CPF/RG/OAB do cliente diretamente ao LLM
+- Confiar cegamente em datas e prazos gerados por IA
+- Não ter fallback quando a API de IA está fora do ar
+- Não implementar limites de uso (pode gerar contas altíssimas)`,
+        tips: [
+          'Sempre anonimize dados antes de enviar ao LLM — substitua nomes e CPFs por variáveis',
+          'Implemente um disclaimer automático em toda resposta de IA',
+          'Use modelos com política de privacidade clara (Claude e GPT não treinam com dados de API)',
+          'Teste mensalmente: envie perguntas capciosas e verifique se o chatbot responde adequadamente',
+          'Mantenha-se atualizado sobre regulamentação: OAB e CNJ estão ativamente criando normas para IA',
+        ],
+      },
+    ],
+  },
+  // ═══════════════════════════════════════════════════════════
+  // SEÇÃO 12: ECONOMIZANDO CRÉDITOS
+  // ═══════════════════════════════════════════════════════════
+  {
+    id: 'economizar-creditos',
+    title: 'Economizando Créditos',
+    description: 'Workflows com IDEs e CLIs externos para reduzir gastos',
+    icon: 'dollar-sign',
+    cards: [
+      {
+        title: 'A Estratégia: Lovable + GitHub + IA Externa',
+        subtitle: 'Como desenvolver fora do Lovable e sincronizar de volta sem gastar créditos',
+        level: 'iniciante',
+        icon: 'lightbulb',
+        analogy: {
+          title: 'Analogia Jurídica',
+          central: 'Trabalhar em Casa e Protocolar no Fórum',
+          description: 'Imagine que você redige petições em casa (sem custo de transporte) e só vai ao fórum para protocolar. Da mesma forma, você pode fazer a maior parte do desenvolvimento fora do Lovable (grátis) e só sincronizar de volta quando estiver pronto — economizando créditos.',
+        },
+        flowSteps: [
+          { label: 'Prototipar', description: 'Use o Lovable para criar o protótipo inicial do app (gasta créditos apenas nesta etapa)' },
+          { label: 'Sincronizar', description: 'Conecte ao GitHub e exporte o código para um repositório' },
+          { label: 'Desenvolver', description: 'Use Claude Code, Antigravity ou Codex para implementar features (sem gastar créditos Lovable)' },
+          { label: 'Publicar', description: 'Faça commit + push — o Lovable detecta as mudanças e sincroniza automaticamente' },
+        ],
+        content: `A estratégia mais eficiente para usar o Lovable é combinar ele com ferramentas externas gratuitas ou baratas. O Lovable é perfeito para prototipagem rápida, mas para desenvolvimento contínuo, você pode economizar significativamente usando IDEs e CLIs com IA.
+
+**O workflow completo:**
+
+\`\`\`
+Lovable (protótipo) → GitHub (sync) → Clone local →
+Ferramenta externa (Claude Code / Antigravity / Codex) →
+Commit + Push → Lovable sincroniza de volta
+\`\`\`
+
+**Por que isso funciona:**
+
+O Lovable tem integração bidirecional com o GitHub. Quando você conecta seu projeto ao GitHub:
+1. Todo código do Lovable é enviado ao repositório
+2. Mudanças feitas externamente (via push) são detectadas pelo Lovable
+3. O Lovable sincroniza automaticamente — sem gastar créditos
+
+**Economia real:**
+
+| Cenário | Créditos Lovable | Custo Externo |
+|---------|-----------------|---------------|
+| **Tudo no Lovable** | ~300-500/mês | R$ 0 |
+| **Protótipo + externo** | ~50-100/mês | ~R$ 100/mês (Claude Code) |
+| **Protótipo + grátis** | ~50-100/mês | R$ 0 (Antigravity) |
+
+**Resultado:** Você pode reduzir o consumo de créditos Lovable em 60-80% usando ferramentas externas para o desenvolvimento contínuo.`,
+        tips: [
+          'Use o Lovable para prototipar rapidamente (é o que ele faz de melhor)',
+          'Para desenvolvimento contínuo e iterações frequentes, use ferramentas externas',
+          'O GitHub é gratuito e a sincronização com o Lovable é automática',
+          'Mesmo com ferramentas externas, volte ao Lovable para ajustes rápidos com Visual Edits (grátis)',
+          'Esta estratégia é especialmente útil no plano Free, onde os créditos são limitados',
+        ],
+      },
+      {
+        title: 'Configurando o GitHub no Lovable',
+        subtitle: 'Passo a passo para conectar seu projeto e habilitar a sincronização',
+        level: 'iniciante',
+        icon: 'git-branch',
+        steps: [
+          'Crie uma conta no GitHub (github.com) se ainda não tiver — é gratuito',
+          'No Lovable, abra seu projeto e clique no ícone do GitHub no painel lateral (parece um gato)',
+          'Clique em "Connect to GitHub" — o Lovable vai pedir permissão para acessar sua conta',
+          'Autorize o Lovable no GitHub — ele criará um repositório automaticamente com o nome do projeto',
+          'Aguarde a sincronização inicial — o Lovable envia todo o código para o GitHub (1-2 minutos)',
+          'Verifique no GitHub: acesse github.com/seu-usuario e confirme que o repositório foi criado',
+          'Teste a sincronização: faça uma mudança no Lovable e verifique se aparece como commit no GitHub',
+          'Pronto! Agora qualquer push externo ao repositório será detectado pelo Lovable automaticamente',
+        ],
+        content: `Conectar o Lovable ao GitHub é o primeiro passo para a estratégia de economia de créditos. A integração é simples e leva menos de 5 minutos.
+
+**O que acontece após conectar:**
+
+| Ação | Resultado |
+|------|----------|
+| Mudança no Lovable | Commit automático no GitHub |
+| Push externo no GitHub | Lovable detecta e sincroniza |
+| Conflito de código | Lovable avisa e permite resolver |
+
+**Configuração do repositório:**
+
+O Lovable cria o repositório com:
+- Branch principal: \`main\`
+- Estrutura: projeto Vite + React + TypeScript
+- Commits automáticos com mensagens descritivas
+- Integração com Supabase (se configurada)
+
+**Importante:** Após conectar, NÃO edite arquivos diretamente no GitHub (pelo browser). Use sempre o Lovable ou ferramentas locais (Claude Code, Antigravity, etc.) para evitar conflitos.`,
+        tips: [
+          'A integração com GitHub é gratuita — não tem custo extra no Lovable nem no GitHub',
+          'Repositórios podem ser públicos ou privados — para apps jurídicos, use SEMPRE privado',
+          'Se o Lovable não detectar suas mudanças, clique em "Sync" no painel do GitHub',
+          'O Lovable cria commits automáticos — você pode ver o histórico completo no GitHub',
+          'Convide colaboradores no GitHub para que outros devs possam contribuir no projeto',
+        ],
+        links: [
+          { label: 'Criar conta GitHub', url: 'https://github.com/signup' },
+          { label: 'Lovable: GitHub Integration', url: 'https://docs.lovable.dev/integrations/git-integration' },
+        ],
+      },
+      {
+        title: 'Lovable + Claude Code: Introdução',
+        subtitle: 'O CLI da Anthropic que programa junto com você no terminal',
+        level: 'iniciante',
+        icon: 'terminal',
+        elementGrid: [
+          { icon: 'terminal', title: 'CLI no Terminal', description: 'Claude Code roda direto no seu terminal — sem IDE, sem browser. Você digita comandos e ele programa.', highlight: true },
+          { icon: 'brain', title: 'Mesmo Claude do Lovable', description: 'Usa os mesmos modelos Claude (Opus/Sonnet) — a qualidade do código é idêntica ao Lovable' },
+          { icon: 'dollar-sign', title: '$20/mês (Pro)', description: 'Plano Pro da Anthropic inclui Claude Code com uso generoso — sem limites por interação' },
+        ],
+        steps: [
+          'Instale o Node.js 18+ no seu computador: acesse nodejs.org e baixe o instalador',
+          'Abra o terminal (Windows: PowerShell ou CMD; Mac: Terminal; Linux: qualquer terminal)',
+          'Instale o Claude Code: digite "npm install -g @anthropic-ai/claude-code" e pressione Enter',
+          'Aguarde a instalação (pode levar 1-2 minutos dependendo da conexão)',
+          'Crie uma conta na Anthropic: acesse console.anthropic.com e cadastre-se',
+          'Assine o plano Pro ($20/mês) para usar o Claude Code com uso generoso',
+          'No terminal, navegue até a pasta do seu projeto: "cd pasta-do-projeto"',
+          'Digite "claude" e pressione Enter — o Claude Code vai iniciar e pedir login na primeira vez',
+        ],
+        content: `**Claude Code** é a ferramenta de linha de comando (CLI) oficial da Anthropic para programar com IA. Ele funciona diretamente no seu terminal — você descreve o que quer em português e ele edita os arquivos do projeto.
+
+**Por que usar Claude Code com Lovable:**
+
+O Claude Code edita os mesmos arquivos que o Lovable gera. Como ambos usam Claude como IA, o código gerado é consistente e compatível. A diferença é que o Claude Code não gasta créditos do Lovable.
+
+**Comparação prática:**
+
+| Aspecto | Lovable | Claude Code |
+|---------|---------|-------------|
+| **Interface** | Visual no browser | Terminal de texto |
+| **IA** | Claude (Opus/Sonnet) | Claude (Opus/Sonnet) |
+| **Preview** | Instantâneo no browser | Precisa abrir o browser manualmente |
+| **Custo** | Créditos do plano Lovable | $20/mês fixo (uso generoso) |
+| **Melhor para** | Prototipagem, Visual Edits | Desenvolvimento contínuo, refatoração |
+
+**Requisitos:**
+- Node.js 18 ou superior
+- npm (vem com o Node.js)
+- Conta na Anthropic com plano Pro ($20/mês)
+- Git instalado (para sincronizar com GitHub/Lovable)`,
+        tips: [
+          'Claude Code é ideal para quem já tem o protótipo no Lovable e quer iterar sem gastar créditos',
+          'Você pode usar português nos comandos — o Claude entende perfeitamente',
+          'O plano Pro ($20/mês) é mais barato que o plano Pro do Lovable para uso intensivo',
+          'Claude Code entende o contexto do projeto inteiro — ele lê todos os arquivos automaticamente',
+          'Use junto com VS Code: abra o terminal integrado e rode o Claude Code de lá',
+        ],
+        links: [
+          { label: 'Claude Code — Documentação', url: 'https://docs.anthropic.com/en/docs/claude-code' },
+          { label: 'Instalar Node.js', url: 'https://nodejs.org' },
+          { label: 'Anthropic Console', url: 'https://console.anthropic.com' },
+        ],
+      },
+      {
+        title: 'Lovable + Claude Code: Workflow Completo',
+        subtitle: 'Passo a passo detalhado para desenvolver localmente e sincronizar com o Lovable',
+        level: 'intermediario',
+        icon: 'terminal',
+        flowSteps: [
+          { label: 'Clonar', description: 'Baixe o código do GitHub para sua máquina local' },
+          { label: 'Instalar', description: 'Instale as dependências do projeto com npm install' },
+          { label: 'Desenvolver', description: 'Use Claude Code para implementar features no terminal' },
+          { label: 'Testar', description: 'Rode o app localmente com npm run dev e teste no browser' },
+          { label: 'Sincronizar', description: 'Faça commit + push e o Lovable detecta automaticamente' },
+        ],
+        steps: [
+          'Certifique-se de que o projeto Lovable está conectado ao GitHub (veja o card anterior)',
+          'No terminal, clone o repositório: "git clone https://github.com/seu-usuario/seu-projeto.git"',
+          'Entre na pasta: "cd seu-projeto"',
+          'Instale as dependências: "npm install" (aguarde — pode levar 2-5 minutos na primeira vez)',
+          'Crie um arquivo CLAUDE.md na raiz do projeto (veja o exemplo abaixo)',
+          'Inicie o Claude Code: digite "claude" no terminal e pressione Enter',
+          'Descreva a feature em português: ex. "Adicione uma página de controle de prazos com tabela, filtros por status e botão de adicionar novo prazo"',
+          'O Claude Code vai editar os arquivos necessários — revise as mudanças sugeridas',
+          'Aceite as mudanças (digite "y") ou peça ajustes ("mude a cor do header para azul marinho")',
+          'Teste localmente: abra outro terminal, rode "npm run dev" e acesse localhost:5173',
+          'Verifique se tudo funciona corretamente no browser',
+          'Quando estiver satisfeito, faça o commit: "git add . && git commit -m \'feat: adicionar controle de prazos\'"',
+          'Envie para o GitHub: "git push origin main"',
+          'Volte ao Lovable — ele detectará as mudanças em até 1 minuto',
+          'Use Visual Edits (grátis) no Lovable para ajustes finais de design',
+        ],
+        prompt: `# CLAUDE.md — Exemplo para projeto Lovable jurídico
+
+## Sobre o Projeto
+App jurídico construído com Lovable (React + TypeScript + Tailwind + shadcn/ui).
+Banco de dados: Supabase (PostgreSQL com RLS).
+
+## Padrões de Código
+- React com TypeScript (.tsx)
+- Tailwind CSS para estilos
+- Componentes shadcn/ui para UI
+- Imports absolutos com @/
+- Hooks customizados em src/hooks/
+- Páginas em src/pages/
+- Componentes em src/components/
+
+## Regras
+- Sempre use português nos textos da interface
+- Tom profissional e formal
+- Cores: azul marinho (#1e3a5f) e branco (#ffffff)
+- Nunca exponha dados sensíveis (CPF, OAB) no frontend
+- Sempre implemente loading states e tratamento de erros`,
+        content: `Este é o workflow completo para desenvolver com Claude Code e sincronizar com o Lovable. Siga cada passo na ordem.
+
+**O arquivo CLAUDE.md:**
+
+O CLAUDE.md é como a Knowledge Base do Lovable — ele ensina o Claude Code sobre seu projeto. Coloque na raiz do repositório e o Claude Code vai ler automaticamente.
+
+**Comandos essenciais do Claude Code:**
+
+| Comando | O que Faz |
+|---------|-----------|
+| \`claude\` | Inicia o Claude Code na pasta atual |
+| \`claude "sua instrução"\` | Executa uma instrução direta |
+| \`/help\` | Mostra ajuda dentro do Claude Code |
+| \`/clear\` | Limpa o contexto da conversa |
+| Ctrl+C | Cancela a operação atual |
+
+**Fluxo de sincronização:**
+
+\`\`\`
+Você edita localmente → git add → git commit → git push →
+GitHub recebe → Lovable detecta → App atualizado!
+\`\`\`
+
+**Resolução de conflitos:**
+
+Se você editar o mesmo arquivo no Lovable E localmente, pode haver conflito. Para evitar:
+1. Sempre faça pull antes de começar: \`git pull origin main\`
+2. Não edite no Lovable enquanto trabalha localmente
+3. Se houver conflito, resolva no terminal com \`git merge\`
+
+**Dica avançada:** Use branches para features grandes. Crie com \`git checkout -b feat/prazos\`, desenvolva, e faça merge quando estiver pronto.`,
+        tips: [
+          'SEMPRE rode "git pull" antes de começar a trabalhar localmente — evita conflitos',
+          'O CLAUDE.md é essencial — sem ele, o Claude Code não conhece os padrões do seu projeto',
+          'Teste localmente antes de fazer push — erros no push podem confundir o Lovable',
+          'Use commits pequenos e frequentes — facilita reverter se algo der errado',
+          'Visual Edits no Lovable são perfeitos para polir o design após desenvolver com Claude Code',
+        ],
+      },
+      {
+        title: 'Lovable + Google Antigravity: Introdução',
+        subtitle: 'A IDE agêntica do Google com IA gratuita e browser embutido',
+        level: 'iniciante',
+        icon: 'sparkles',
+        elementGrid: [
+          { icon: 'sparkles', title: 'IDE Agêntica', description: 'Antigravity é uma IDE completa no browser com IA integrada — edite código, veja preview e converse com a IA', highlight: true },
+          { icon: 'dollar-sign', title: 'Grátis (Preview)', description: 'Durante o período de preview, o Antigravity é totalmente gratuito — sem limites de uso' },
+          { icon: 'brain', title: 'Gemini 3 Pro + Claude', description: 'Usa Gemini 3 Pro do Google e também oferece Claude como modelo alternativo' },
+        ],
+        content: `**Google Antigravity** (anteriormente Project IDX / Firebase Studio) é a IDE agêntica do Google. Ela funciona diretamente no browser, tem IA integrada e pode rodar projetos completos — incluindo projetos Lovable.
+
+**Por que usar Antigravity com Lovable:**
+
+| Vantagem | Detalhe |
+|----------|---------|
+| **Grátis** | Sem custo durante o período de preview |
+| **No browser** | Não precisa instalar nada no seu computador |
+| **IA integrada** | Gemini 3 Pro + Claude disponíveis |
+| **Preview embutido** | Veja o resultado ao vivo enquanto edita |
+| **GitHub integrado** | Clone e push diretamente da IDE |
+
+**Como funciona:**
+
+1. Você importa seu projeto Lovable do GitHub para o Antigravity
+2. A IDE abre com editor de código, terminal e preview do app
+3. Você conversa com a IA (Gemini/Claude) e ela edita o código
+4. Ao terminar, faz commit + push direto do Antigravity
+5. O Lovable detecta e sincroniza
+
+**Antigravity vs Claude Code:**
+
+| Aspecto | Antigravity | Claude Code |
+|---------|-------------|-------------|
+| **Interface** | IDE visual no browser | Terminal de texto |
+| **IA** | Gemini 3 Pro + Claude | Claude (Opus/Sonnet) |
+| **Preview** | Embutido na IDE | Precisa rodar npm run dev |
+| **Custo** | Grátis (preview) | $20/mês |
+| **Instalação** | Nenhuma (browser) | Node.js + npm |
+
+**Ideal para:** Quem prefere uma interface visual e não quer instalar nada no computador.`,
+        tips: [
+          'Antigravity é grátis durante o preview — aproveite para economizar ao máximo',
+          'A interface é similar ao VS Code — se você já usou, vai se sentir em casa',
+          'O preview embutido mostra mudanças em tempo real, similar ao Lovable',
+          'Use Gemini para tarefas gerais e Claude para código mais complexo',
+          'Como roda no browser, funciona até em Chromebooks e tablets',
+        ],
+        links: [
+          { label: 'Google Antigravity', url: 'https://idx.google.com' },
+          { label: 'Documentação Antigravity', url: 'https://developers.google.com/idx' },
+        ],
+      },
+      {
+        title: 'Lovable + Google Antigravity: Workflow Completo',
+        subtitle: 'Passo a passo para desenvolver no Antigravity e sincronizar com o Lovable',
+        level: 'intermediario',
+        icon: 'sparkles',
+        flowSteps: [
+          { label: 'Importar', description: 'Importe o repositório do GitHub para o Antigravity' },
+          { label: 'Configurar', description: 'Instale dependências e configure o ambiente' },
+          { label: 'Desenvolver', description: 'Use a IA do Antigravity para implementar features' },
+          { label: 'Testar', description: 'Visualize no preview embutido e teste a funcionalidade' },
+          { label: 'Sincronizar', description: 'Faça commit + push direto do Antigravity para o GitHub' },
+        ],
+        steps: [
+          'Acesse idx.google.com e faça login com sua conta Google',
+          'Clique em "Import a repo" na tela inicial',
+          'Cole a URL do repositório GitHub do seu projeto Lovable',
+          'Aguarde o Antigravity clonar e configurar o ambiente (2-5 minutos na primeira vez)',
+          'O editor vai abrir com sua estrutura de arquivos à esquerda e editor no centro',
+          'Abra o terminal integrado (Ctrl+` ou menu Terminal → New Terminal)',
+          'Instale as dependências: digite "npm install" no terminal e aguarde',
+          'Inicie o servidor de desenvolvimento: "npm run dev"',
+          'O preview embutido abrirá à direita mostrando seu app ao vivo',
+          'Use o chat de IA (ícone de estrela) para pedir mudanças: "Adicione um filtro de data na tabela de processos"',
+          'A IA editará os arquivos — revise as mudanças no editor e confira no preview',
+          'Quando estiver satisfeito, vá ao painel Source Control (Ctrl+Shift+G)',
+          'Stage as mudanças (clique no +), escreva a mensagem do commit e clique em Commit',
+          'Clique em "Sync Changes" (ou "Push") para enviar ao GitHub',
+          'Volte ao Lovable — ele detectará as mudanças automaticamente',
+        ],
+        content: `Este é o workflow completo para usar o Google Antigravity como IDE de desenvolvimento complementar ao Lovable.
+
+**Ambiente do Antigravity:**
+
+O Antigravity cria um workspace completo com:
+- **Editor de código** — similar ao VS Code, com syntax highlighting e autocomplete
+- **Terminal integrado** — rode comandos npm, git, etc.
+- **Preview do app** — veja seu app rodando ao vivo enquanto edita
+- **Chat de IA** — converse com Gemini/Claude para pedir mudanças no código
+- **Source Control** — gerencie Git (commit, push, pull) sem sair da IDE
+
+**Dicas de produtividade:**
+
+| Atalho | Ação |
+|--------|------|
+| Ctrl+\` | Abrir/fechar terminal |
+| Ctrl+Shift+G | Painel de controle de versão (Git) |
+| Ctrl+P | Buscar arquivo por nome |
+| Ctrl+Shift+F | Buscar texto em todos os arquivos |
+
+**Resolução de problemas comuns:**
+
+| Problema | Solução |
+|----------|---------|
+| Preview não carrega | Rode \`npm run dev\` novamente no terminal |
+| Erro de dependências | Delete \`node_modules\` e rode \`npm install\` |
+| Push não funciona | Verifique permissões do GitHub no Antigravity |
+| IA não entende o projeto | Descreva o contexto antes de pedir a feature |`,
+        tips: [
+          'O preview embutido é a grande vantagem do Antigravity — use para validar mudanças em tempo real',
+          'Se a IA do Antigravity não gerar código bom, troque para Claude nas configurações',
+          'Sempre faça "git pull" antes de começar para evitar conflitos com o Lovable',
+          'Use o terminal integrado para rodar testes antes de fazer push',
+          'O Antigravity suporta extensões — instale ESLint e Prettier para manter o código limpo',
+        ],
+      },
+      {
+        title: 'Lovable + OpenAI Codex: Introdução',
+        subtitle: 'O CLI da OpenAI que programa no terminal usando GPT-4',
+        level: 'iniciante',
+        icon: 'terminal',
+        elementGrid: [
+          { icon: 'terminal', title: 'CLI no Terminal', description: 'Codex roda no terminal, similar ao Claude Code — você descreve o que quer e ele programa', highlight: true },
+          { icon: 'brain', title: 'GPT-4o + o3', description: 'Usa os modelos mais avançados da OpenAI para gerar e editar código' },
+          { icon: 'dollar-sign', title: '$20/mês (Plus)', description: 'Incluso no plano ChatGPT Plus com uso generoso via CLI' },
+        ],
+        steps: [
+          'Instale o Node.js 18+ no seu computador se ainda não tiver (nodejs.org)',
+          'Abra o terminal e instale o Codex: "npm install -g @openai/codex"',
+          'Aguarde a instalação (1-2 minutos)',
+          'Crie uma conta na OpenAI: acesse platform.openai.com',
+          'Assine o plano ChatGPT Plus ($20/mês) para uso generoso do Codex',
+          'No terminal, navegue até a pasta do projeto: "cd seu-projeto"',
+          'Digite "codex" e pressione Enter — o Codex vai iniciar e pedir autenticação',
+          'Autentique com sua conta OpenAI e comece a usar',
+        ],
+        content: `**OpenAI Codex** é a ferramenta de linha de comando da OpenAI para programar com IA. Funciona de forma similar ao Claude Code, mas usa os modelos GPT da OpenAI.
+
+**Como funciona:**
+
+Você abre o Codex no terminal, descreve o que quer em português e ele edita os arquivos do seu projeto. O fluxo de sincronização com o Lovable é idêntico ao do Claude Code.
+
+**Codex vs Claude Code:**
+
+| Aspecto | OpenAI Codex | Claude Code |
+|---------|-------------|-------------|
+| **IA** | GPT-4o, o3 | Claude Opus, Sonnet |
+| **Custo** | $20/mês (ChatGPT Plus) | $20/mês (Anthropic Pro) |
+| **Instalação** | npm install -g @openai/codex | npm install -g @anthropic-ai/claude-code |
+| **Arquivo de config** | AGENTS.md | CLAUDE.md |
+| **Linguagem** | Entende português | Entende português |
+| **Qualidade React** | Muito boa | Excelente |
+
+**O arquivo AGENTS.md:**
+
+Similar ao CLAUDE.md do Claude Code, o Codex usa um arquivo AGENTS.md para entender o contexto do projeto. A estrutura é a mesma — coloque na raiz do repositório.
+
+**Quando escolher o Codex:**
+- Se você já tem ChatGPT Plus (não precisa de assinatura extra)
+- Se prefere os modelos GPT para certas tarefas
+- Se quer experimentar uma alternativa ao Claude Code`,
+        tips: [
+          'Se você já paga ChatGPT Plus, o Codex está incluso — não tem custo extra',
+          'O AGENTS.md funciona igual ao CLAUDE.md — copie o conteúdo e renomeie',
+          'Para projetos Lovable (React + TypeScript), Claude Code tende a gerar código ligeiramente melhor',
+          'Você pode usar ambos no mesmo projeto — Claude Code para features complexas, Codex para ajustes rápidos',
+          'O fluxo de sincronização com o Lovable é idêntico: commit + push',
+        ],
+        links: [
+          { label: 'OpenAI Codex CLI', url: 'https://github.com/openai/codex' },
+          { label: 'OpenAI Platform', url: 'https://platform.openai.com' },
+        ],
+      },
+      {
+        title: 'Lovable + OpenAI Codex: Workflow Completo',
+        subtitle: 'Passo a passo para desenvolver com Codex e sincronizar com o Lovable',
+        level: 'intermediario',
+        icon: 'terminal',
+        flowSteps: [
+          { label: 'Clonar', description: 'Baixe o código do GitHub para sua máquina' },
+          { label: 'Instalar', description: 'Instale dependências com npm install' },
+          { label: 'Desenvolver', description: 'Use o Codex para implementar features' },
+          { label: 'Testar', description: 'Rode npm run dev e valide no browser' },
+          { label: 'Sincronizar', description: 'Commit + push para sincronizar com o Lovable' },
+        ],
+        steps: [
+          'Certifique-se de que o projeto está conectado ao GitHub no Lovable',
+          'Clone o repositório: "git clone https://github.com/seu-usuario/seu-projeto.git"',
+          'Entre na pasta: "cd seu-projeto"',
+          'Instale dependências: "npm install"',
+          'Crie o arquivo AGENTS.md na raiz (copie o modelo do CLAUDE.md e renomeie)',
+          'Inicie o Codex: "codex" no terminal',
+          'Descreva a feature: "Crie uma página de gestão de honorários com tabela, filtros e gráfico de receitas"',
+          'O Codex editará os arquivos — revise cada mudança sugerida',
+          'Aceite ou ajuste conforme necessário',
+          'Teste localmente: "npm run dev" e acesse localhost:5173',
+          'Faça commit: "git add . && git commit -m \'feat: gestão de honorários\'"',
+          'Push para o GitHub: "git push origin main"',
+        ],
+        content: `O workflow com o Codex é muito similar ao do Claude Code. A diferença principal é o comando de instalação e o arquivo de configuração.
+
+**Comparação de comandos:**
+
+| Ação | Claude Code | Codex |
+|------|-------------|-------|
+| **Instalar** | npm i -g @anthropic-ai/claude-code | npm i -g @openai/codex |
+| **Iniciar** | claude | codex |
+| **Config** | CLAUDE.md | AGENTS.md |
+| **Ajuda** | /help | /help |
+
+**O restante é idêntico:**
+- git clone, npm install, npm run dev
+- git add, git commit, git push
+- Lovable detecta e sincroniza
+
+**Dica:** Você pode ter CLAUDE.md E AGENTS.md no mesmo projeto. Cada ferramenta lê apenas o seu arquivo — não há conflito.
+
+**Quando usar cada ferramenta:**
+
+| Tarefa | Melhor Ferramenta |
+|--------|------------------|
+| **Feature complexa (React)** | Claude Code |
+| **Ajuste rápido** | Codex ou Claude Code |
+| **Debug** | Claude Code (melhor em análise) |
+| **Geração de texto/conteúdo** | Codex (GPT bom em texto) |
+| **Prototipagem visual** | Lovable (sempre) |`,
+        tips: [
+          'O workflow é idêntico ao do Claude Code — só muda a ferramenta e o arquivo de config',
+          'Você pode ter CLAUDE.md e AGENTS.md no mesmo projeto sem conflitos',
+          'Prefira commits descritivos: "feat: adicionar gestão de honorários" ao invés de "update"',
+          'Sempre teste localmente antes de fazer push ao GitHub',
+          'Se algo der errado, reverta com "git revert HEAD" antes que o Lovable sincronize',
+        ],
+      },
+      {
+        title: 'Comparativo: Claude Code vs Antigravity vs Codex',
+        subtitle: 'Qual ferramenta escolher para complementar seu fluxo no Lovable',
+        level: 'intermediario',
+        icon: 'arrow-right-left',
+        refTable: [
+          { feature: 'Claude Code', description: 'CLI no terminal, Claude Opus/Sonnet, excelente para React/TypeScript', config: '$20/mês — Melhor para código complexo' },
+          { feature: 'Google Antigravity', description: 'IDE no browser, Gemini 3 Pro + Claude, preview embutido', config: 'Grátis (preview) — Melhor custo-benefício' },
+          { feature: 'OpenAI Codex', description: 'CLI no terminal, GPT-4o/o3, bom para ajustes rápidos', config: '$20/mês — Bom se já tem ChatGPT Plus' },
+        ],
+        content: `Aqui está um comparativo detalhado para ajudar você a escolher a melhor ferramenta para complementar o Lovable.
+
+**Comparativo completo:**
+
+| Critério | Claude Code | Antigravity | Codex |
+|----------|-------------|-------------|-------|
+| **Tipo** | CLI (terminal) | IDE (browser) | CLI (terminal) |
+| **IA principal** | Claude Opus 4.6 | Gemini 3 Pro | GPT-4o |
+| **Custo** | $20/mês | Grátis (preview) | $20/mês |
+| **Instalação** | npm install | Nenhuma | npm install |
+| **Preview do app** | Manual (npm run dev) | Embutido | Manual (npm run dev) |
+| **Qualidade React** | Excelente | Muito boa | Muito boa |
+| **Português** | Excelente | Bom | Bom |
+
+**Recomendação por perfil:**
+
+| Perfil | Ferramenta Recomendada | Motivo |
+|--------|----------------------|--------|
+| **Advogado iniciante** | Antigravity | Grátis, visual, sem instalação |
+| **Advogado técnico** | Claude Code | Melhor qualidade de código React |
+| **Já tem ChatGPT Plus** | Codex | Sem custo extra |
+| **Quer economizar máximo** | Antigravity | 100% grátis no preview |
+| **Projeto complexo** | Claude Code | Melhor raciocínio e contexto |
+
+**Estratégia híbrida (recomendada):**
+
+Use TODAS as ferramentas conforme a necessidade:
+1. **Lovable** — prototipagem inicial e Visual Edits
+2. **Claude Code** — features complexas e refatoração
+3. **Antigravity** — edições visuais e ajustes rápidos (grátis)
+4. **Codex** — complemento quando já tem ChatGPT Plus`,
+        tips: [
+          'Não existe "melhor ferramenta" absoluta — cada uma tem forças diferentes',
+          'A estratégia mais econômica é Lovable (protótipo) + Antigravity (desenvolvimento grátis)',
+          'Para máxima qualidade de código React, Claude Code é a melhor opção',
+          'Você pode trocar de ferramenta a qualquer momento — todas usam o mesmo repositório Git',
+          'Teste as 3 antes de decidir — Antigravity e Codex oferecem trial/grátis',
+        ],
+      },
+      {
+        title: 'Dicas Avançadas para Economizar Créditos',
+        subtitle: 'Estratégias de expert para gastar o mínimo possível no Lovable',
+        level: 'avancado',
+        icon: 'zap',
+        checklist: [
+          {
+            title: 'Antes de Usar o Lovable (Preparação)',
+            items: [
+              'Planeje a feature inteira antes de abrir o Lovable — escreva o que quer em um documento',
+              'Use Chat Mode (barato) para investigar antes de usar Agent Mode (caro)',
+              'Configure a Knowledge Base uma vez — evita repetir instruções em cada prompt',
+              'Use Plan Mode para validar a estratégia antes de gastar créditos com implementação',
+              'Agrupe mudanças relacionadas em um único prompt detalhado (1 prompt grande > 5 pequenos)',
+              'Verifique se a mudança pode ser feita com Visual Edits (grátis) antes de recorrer à IA',
+            ],
+          },
+          {
+            title: 'Durante o Desenvolvimento (Execução)',
+            items: [
+              'Use ferramentas externas (Claude Code/Antigravity/Codex) para desenvolvimento contínuo',
+              'Reserve o Lovable para: prototipagem rápida, Visual Edits e Supabase setup',
+              'Faça commit + push frequente — o Lovable sincroniza sem gastar créditos',
+              'Use branches Git para features grandes — merge quando estiver pronto',
+              'Aprenda atalhos de Visual Edits: arrastar, redimensionar, editar texto inline',
+              'Monitore seu uso de créditos semanalmente em Settings → Usage',
+              'Se o crédito acabar, continue desenvolvendo externamente e sincronize via Git',
+            ],
+          },
+        ],
+        content: `Estas são as estratégias usadas por desenvolvedores experientes para maximizar a economia de créditos no Lovable.
+
+**A regra de ouro:**
+
+> Use o Lovable para o que ele faz de melhor (prototipagem e Visual Edits) e ferramentas externas para o restante.
+
+**Economia estimada por estratégia:**
+
+| Estratégia | Economia de Créditos |
+|-----------|---------------------|
+| Visual Edits para ajustes visuais | 100% (grátis) |
+| Chat Mode antes de Agent Mode | ~80% |
+| Plan Mode antes de construir | ~50% |
+| Prompts detalhados (menos iterações) | ~30% |
+| Knowledge Base configurado | ~20% |
+| Desenvolvimento externo via Git | ~70% |
+
+**Workflow otimizado de um expert:**
+
+\`\`\`
+1. Lovable: Protótipo rápido (Agent Mode) — 1-2 prompts
+2. Lovable: Visual Edits (grátis) — polir design
+3. GitHub: Sincronizar código
+4. Claude Code: Desenvolver features — 90% do trabalho aqui
+5. Git push: Sincronizar de volta
+6. Lovable: Visual Edits finais (grátis)
+7. Lovable: Deploy com 1 clique
+\`\`\`
+
+**Resultado:** Um app jurídico completo pode ser construído com menos de 100 créditos Lovable, usando ferramentas externas para o grosso do desenvolvimento.`,
+        tips: [
+          'A maior economia vem de usar ferramentas externas para desenvolvimento contínuo',
+          'Visual Edits são subestimados — muitas mudanças podem ser feitas sem créditos',
+          'Prompts vagos gastam créditos com iterações. Um prompt detalhado é mais barato que 3 genéricos',
+          'Monitore gastos semanalmente — você vai se surpreender com onde os créditos vão',
+          'Compartilhe essas dicas com outros advogados que usam o Lovable — todos economizam juntos',
+        ],
+      },
+    ],
+  },
 ];
